@@ -1,0 +1,122 @@
+<!-- consultation-form.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="form.css">
+  <title>Dream Pathway</title>
+</head>
+
+<header>
+  <div class="header-container">
+    <a href="index.html" class="logo"><img src="Image/2.png" alt="Dream Pathway Logo"></a>
+    <nav class="headertext">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="AboutUs.html">About Us</a></li>
+        <li><a href="#consultation">Free Consultation</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Client Feedbacks <span id="arrow">▼</span></a>
+          <div class="dropdown-content">
+            <a href="granted_visa.html">Granted Visa</a>
+            <a href="client_success_story.html">Client Success Story</a>
+            <a href="client_testimonials.html">Client Testimonials</a>
+          </div>
+        </li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<body>
+  
+
+<div class="form-container">
+  <h2>Dream Pathway</h2>
+  <form id="consultation-form">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <div class="name-inputs">
+        <input type="text" id="first-name" name="first-name" placeholder="First" required>
+        <input type="text" id="last-name" name="last-name" placeholder="Last" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="age">Age</label>
+      <input type="number" id="age" name="age" required>
+    </div>
+
+    <div class="form-group">
+      <label for="contact-number">Contact Number</label>
+      <input type="text" id="contact-number" name="contact-number" placeholder="Best number to reach you via phone call or WhatsApp" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="location">Location</label>
+      <input type="text" id="location" name="location" placeholder="Your country of residency" required>
+    </div>
+
+    <div class="form-group">
+      <label for="occupation">Current Occupation</label>
+      <input type="text" id="occupation" name="occupation" placeholder="Current Job" required>
+    </div>
+
+    <div class="form-group">
+      <label for="education">Highest Educational Attainment</label>
+      <select id="education" name="education" required>
+        <option value="HighSchool">High School Graduate</option>
+        <option value="CollegeDegree">College Degree Holder</option>
+        <option value="CollegeUndergraduate">College Undergraduate</option>
+        <option value="Vocational">Vocational</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+        <label for="services">Services</label>
+        <select id="services" name="services" required>
+            <option value="Permanent Residency Application">Permanent Residency Application</option>
+            <option value="Student Visa Application">Student Visa Application</option>
+            <option value="Permanent Residency Application with job search support">Permanent Residency Application with job search support</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+      <label for="dream-country">Dream Country</label>
+      <select id="dream-country" name="dream-country" required>
+        <option value="Australia">Australia</option>
+        <option value="Canada">Canada</option>
+        <option value="AustraliaAndCanada">Australia & Canada</option>
+        <option value="Others">Others - Please indicate on the box below</option>
+      </select>
+    </div>
+
+    
+
+    <div class="form-group">
+      <label for="other-country">If Dream Country is not on the list above, please indicate here</label>
+      <textarea id="other-country" name="other-country"></textarea>
+    </div>
+
+    <div class="button-container">
+        <button type="submit">Submit</button>
+    </div>
+
+    
+  </form>
+  
+  
+</div>
+
+
+
+</body>
+
+</html>

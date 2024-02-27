@@ -1,0 +1,200 @@
+/* form.css */
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: auto;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 20px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.name-inputs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name-inputs input {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end; /* Align the button to the right */
+}
+
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+button {
+  background-color: #004AAD;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #003f92;
+}
+
+header {
+  background-color: #004AAD;
+  color: #fff;
+  padding: 10px 0;
+  height: 150px;
+  position: relative;
+  font-family: 'Segoe UI', sans-serif;
+  width: 100%;
+  top: 0;
+}
+
+.content {
+  padding-top: 10px; 
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center; 
+  
+}
+
+.logo img {
+  position: ab;
+  width: 200px;
+  height: 200px;
+  padding-left: 20px;
+  align-self: flex-start; 
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  padding-right: 100px;
+  font-size: 20px;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #ffde59;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease; /* Add transition effect for width */
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+.content {
+  flex: 1;
+  text-align: center;
+  padding-top: 80px; /* Adjust according to header height */
+}
+
+footer {
+  background-color: #004AAD;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: auto; /* Push the footer to the bottom */
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #003f92f1;
+  min-width: 160px; /* Adjust width as needed */
+  top: 100%; /* Position dropdown below the text */
+  left: 0; /* Align dropdown with the left edge of its parent */
+}
+
+.dropdown-content a {
+  color: rgb(255, 255, 255);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Style for the arrow symbol */
+.dropdown-content span {
+  display: inline-block;
+  margin-left: 5px;
+  transition: transform 0.3s ease; /* Add transition for smooth animation */
+}
+
+/* Rotate the arrow on hover */
+.dropdown:hover .dropdown-content span {
+  transform: rotate(180deg);
+}
+
+.dropdown-content a:hover {
+  background-color: #003f92f1;
+}
+
+/* Display dropdown content on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
