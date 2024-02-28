@@ -5,16 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dream Pathway</title>
   <link rel="stylesheet" href="styleAboutUs.css">
+  
 </head>
 
 <header>
   <div class="header-container">
-    <a href="index.html" class="logo"><img src="Image/2.png" alt="Dream Pathway Logo"></a>
+    <a href="index.html" class="logo"><img src="Image/Logo/2.png" alt="Dream Pathway Logo"></a>
     <nav class="headertext">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="AboutUs.html">About Us</a></li>
+        <li class="dropdown">
+          <a href="AboutUs.html" class="dropbtn">About Us <span id="arrow">▼</span></a>
+          <div class="dropdown-content">
+            <a href="AboutUs.html#whoweare">Who We Are</a>
+            <a href="AboutUs.html#about">Mission, Vission, And Core Values</a>
+            <a href="AboutUs.html#profile">Meet The Team</a>
+          </div>
+        </li>
         <li><a href="consultation-form.html">Free Consultation</a></li>
         <li class="dropdown">
           <a href="#" class="dropbtn">Client Feedbacks <span id="arrow">▼</span></a>
@@ -24,20 +32,26 @@
             <a href="client_testimonials.html">Client Testimonials</a>
           </div>
         </li>
-        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="ContactUs.html">Contact Us</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
 <body>
+  <section id = whoweare>
   <h1>About Us</h1>
   
-  <iframe width="1080" height="640" src="https://www.youtube.com/embed/HIEp8kAWnx4" title="We are Dream Pathway International!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-  <h2>Core Values</h2>
-  <p>ICEE - Integrity, Collaboration, Empathy, and Excellence</p>
+  <iframe width="768" height="576" src="https://www.youtube.com/embed/HIEp8kAWnx4" title="We are Dream Pathway International!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </section>
+
+  <section id="about">
   <div class="content">
-    <section id="about">
+  <h2></h2>  
+  <h2>Core Values</h2>
+  <p style="text-align: center;"><strong>ICEE</strong> - Integrity, Collaboration, Empathy, and Excellence</p>
+  
+    
       <div class="mission-container">
         <div class="mission-column">
           <h2>Our Mission</h2>
@@ -49,8 +63,75 @@
           <p>Our vision is to empower our clients with the knowledge, resources, and support they need to overcome any Immigration challenges they may face. By upholding the highest ethical standards and employing a team of skilled professionals, we strive to make a positive impact on our clients’ lives and contribute to the growth and diversity of the countries they aspire to call home.</p>
         </div>
       </div>
+      </div>
+    </section>
+
+      <section id = profile>
+      <div class="profile-carousel">
+        <div class="profile-card">
+          <img src="Image/Profile/test.png" alt="Profile 1">
+          <h3>Test 1</h3>
+          <p style="text-align: center;">Proccessing</p>
+        </div>
+
+        <div class="profile-card">
+          <img src="Image/Profile/test.png" alt="Profile 1">
+          <h3>Test 2</h3>
+          <p style="text-align: center;">Proccessing</p>
+        </div>
+
+        <div class="profile-card">
+          <img src="Image/Profile/test.png" alt="Profile 1">
+          <h3>Test 3</h3>
+          <p style="text-align: center;">Proccessing</p>
+        </div>
+        
+        <div class="profile-card">
+          <img src="Image/Profile/test.png" alt="Profile 1">
+          <h3>Test 4</h3>
+          <p style="text-align: center;">Proccessing</p>
+        </div>
+
+        <div class="profile-card">
+          <img src="Image/Profile/test.png" alt="Profile 1">
+          <h3>Test 5</h3>
+          <p style="text-align: center;">Proccessing</p>
+        </div>
+
+        <div class="profile-card">
+          <img src="Image/Profile/test.png" alt="Profile 1">
+          <h3>Test 6</h3>
+          <p style="text-align: center;">Proccessing</p>
+        </div>
+
+        <div class="profile-card">
+          <img src="Image/Profile/test.png" alt="Profile 1">
+          <h3>Test 7</h3>
+          <p style="text-align: center;">Proccessing</p>
+        </div>
+
+        <div class="profile-card">
+          <img src="Image/Profile/test.png" alt="Profile 1">
+          <h3>Test 8</h3>
+          <p style="text-align: center;">Proccessing</p>
+        </div>
+
+        <div class="profile-card">
+          <img src="Image/Profile/test.png" alt="Profile 1">
+          <h3>Test 9</h3>
+          <p style="text-align: center;">Proccessing</p>
+        </div>
+
+        <div class="profile-card">
+          <img src="Image/Profile/test.png" alt="Profile 1">
+          <h3>Test 10</h3>
+          <p style="text-align: center;">Proccessing</p>
+        </div>     
+      </div>
     </section>
   </div>
+
   
+  <script src="profileAnimation.js"></script>
 </body>
 </html>

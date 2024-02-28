@@ -1,25 +1,36 @@
+@font-face {
+  font-family: 'Poppins'; 
+  src: url('Poppins/Poppins-Light.ttf') format('truetype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppinss'; 
+  src: url('Poppins/Poppins-Medium.ttf') format('truetype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    padding-top: 100px;
   }
   
   header {
+    font-family: 'Poppins', sans-serif;
     background-color: #004AAD;
     color: #fff;
     padding: 10px 0;
     height: 150px;
-    position: relative;
-    font-family: 'Segoe UI', sans-serif;
+    position: fixed;
     width: 100%;
     top: 0;
-  }
-  
-  .content {
-    padding-top: 10px; 
   }
   
   .header-container {
@@ -28,18 +39,10 @@ body {
     align-items: center;
   }
   
-  .logo {
-    display: flex;
-    align-items: center; 
-    
-  }
-  
   .logo img {
-    position: ab;
-    width: 200px;
-    height: 200px;
+    width: 150px; /* Adjust logo size */
+    height: auto; /* Maintain aspect ratio */
     padding-left: 20px;
-    align-self: flex-start; 
   }
   
   nav ul {
@@ -47,7 +50,6 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    padding-right: 100px;
     font-size: 20px;
   }
   
@@ -71,7 +73,8 @@ body {
     background-color: #ffde59;
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Center the underline */
     transition: width 0.3s ease; /* Add transition effect for width */
   }
   
@@ -80,9 +83,8 @@ body {
   }
   
   .content {
-    flex: 1;
+    padding-top: 160px; /* Adjust according to header height */
     text-align: center;
-    padding-top: 80px; /* Adjust according to header height */
   }
   
   footer {
@@ -90,7 +92,6 @@ body {
     color: #fff;
     text-align: center;
     padding: 20px 0;
-    margin-top: auto; /* Push the footer to the bottom */
   }
   
   /* Dropdown */
@@ -138,8 +139,28 @@ body {
   button {
     background-color: #004AAD;
     color: #fff;
+    font-family: 'Poppinss', sans-serif;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    position: relative; /* Required for positioning the pseudo-element */
+    overflow: hidden; /* Hides the default underline */
   }
+  
+  button::before {
+    content: ''; /* Required for pseudo-element */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px; /* Height of the underline */
+    background-color: #ffde59; /* Color of the underline */
+    transform: scaleX(0); /* Initial width of the underline (hidden) */
+    transition: transform 0.3s ease; /* Transition for the animation */
+  }
+  
+  button:hover::before {
+    transform: scaleX(1); /* Show the underline on hover */
+  }
+  

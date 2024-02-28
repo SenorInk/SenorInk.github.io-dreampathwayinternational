@@ -1,191 +1,207 @@
+@font-face {
+  font-family: 'Poppins'; 
+  src: url('Poppins/Poppins-Light.ttf') format('truetype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppinss'; 
+  src: url('Poppins/Poppins-Medium.ttf') format('truetype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
 body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    
-  }
+  
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Poppins', sans-serif; /* Apply default font family */
+}
 
-  header {
-    background-color: #004AAD;
-    color: #fff;
-    padding: 10px 0;
-    height: 150px;
-    position: relative;
-    font-family: 'Segoe UI', sans-serif;
-    width: 100%;
-    top: 0;
-  }
-  
-  .content {
-    padding-top: 10px; 
-  }
-  
-  .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo {
-    display: flex;
-    align-items: center; 
-    
-  }
-  
-  .logo img {
-    position: ab;
-    width: 200px;
-    height: 200px;
-    padding-left: 20px;
-    align-self: flex-start; 
-  }
-  
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    padding-right: 100px;
-    font-size: 20px;
-  }
-  
-  nav ul li {
-    display: inline;
-    margin: 0 10px;
-  }
-  
-  nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 5px 10px;
-    position: relative;
-  }
-  
-  nav ul li a::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background-color: #ffde59;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transition: width 0.3s ease; /* Add transition effect for width */
-  }
-  
-  nav ul li a:hover::after {
-    width: 100%;
-  }
-  
-  .content {
-    flex: 1;
-    text-align: center;
-    padding-top: 80px; /* Adjust according to header height */
-  }
-  
-  footer {
-    background-color: #004AAD;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: auto; /* Push the footer to the bottom */
-  }
-  
-  /* Dropdown */
-  .dropdown {
-    position: relative;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #003f92f1;
-    min-width: 160px; /* Adjust width as needed */
-    top: 100%; /* Position dropdown below the text */
-    left: 0; /* Align dropdown with the left edge of its parent */
-  }
-  
-  .dropdown-content a {
-    color: rgb(255, 255, 255);
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  /* Style for the arrow symbol */
-  .dropdown-content span {
-    display: inline-block;
-    margin-left: 5px;
-    transition: transform 0.3s ease; /* Add transition for smooth animation */
-  }
-  
-  /* Rotate the arrow on hover */
-  .dropdown:hover .dropdown-content span {
-    transform: rotate(180deg);
-  }
-  
-  .dropdown-content a:hover {
-    background-color: #003f92f1;
-  }
-  
-  /* Display dropdown content on hover */
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  }
-  
-  h1 {
-    text-align: center;
-    max-width: 80%;
-    margin: 20px auto;
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 40px;
-  }
-  h2{
-    text-align: center;
-    max-width: 80%;
-    margin: 20px auto;
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 30px;
-    color: #004AAD;
-  }
+header {
+  font-family: 'Poppins', sans-serif;
+  background-color: #004AAD;
+  color: #fff;
+  padding: 10px 0;
+  height: 150px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
 
-  p{
-    
-    text-align: center;
-    max-width: 80%;
-    margin: 20px auto;
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 20px;
-    color: #004AAD;
-  }
-  
-  iframe {
-    display: block;
-    margin: 0px auto;
-  }
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  .mission-container {
-    display: flex;
-    justify-content: space-around;
-    
-  }
+.logo img {
+  width: 150px; /* Adjust logo size */
+  height: auto; /* Maintain aspect ratio */
+  padding-left: 20px;
+}
 
-  .mission-column {
-    flex: 1;
-    padding: 20px;
-    border: 2px solid #ccc;
-    margin: 10px;
-    border-radius: 10px;
-    text-align: justify;
-  }
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 20px;
+}
 
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
 
-  
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #ffde59;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%); /* Center the underline */
+  transition: width 0.3s ease; /* Add transition effect for width */
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+.content {
+  padding-top: 160px; /* Adjust according to header height */
+  text-align: center;
+}
+
+footer {
+  background-color: #004AAD;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #003f92f1;
+  min-width: 160px;
+  top: 100%;
+  left: 0;
+}
+
+.dropdown-content a {
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content span {
+  display: inline-block;
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-content span {
+  transform: rotate(180deg);
+}
+
+.dropdown-content a:hover {
+  background-color: #003f92f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+h1, h2, h3 {
+  max-width: 80%;
+  margin: 20px auto;
+  color: #004AAD;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-family: 'Poppinss';
+}
+
+p {
+  max-width: 80%;
+  margin: 20px auto;
+  color: #004AAD;
+  text-align: justify;
+}
+
+iframe {
+  display: block;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+.mission-container {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 100px;
+}
+
+.mission-column {
+  flex: 1;
+  padding: 20px;
+  border: 2px solid #ccc;
+  margin: 10px;
+  border-radius: 10px;
+  text-align: justify;
+}
+
+.profile-carousel {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px;
+}
+
+.profile-card {
+  display: inline-block;
+  width: 250px;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.profile-card img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}

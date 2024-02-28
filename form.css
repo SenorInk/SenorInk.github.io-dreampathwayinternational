@@ -1,6 +1,15 @@
 /* form.css */
 
+
+@font-face {
+  font-family: 'Poppins'; 
+  src: url('Poppins/Poppins-Light.ttf') format('truetype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
+  padding-top: 190px;
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
@@ -17,7 +26,7 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 20px;
 }
 
@@ -32,11 +41,13 @@ h2 {
 .name-inputs {
   display: flex;
   justify-content: space-between;
+  font-family: 'Poppins', sans-serif;
 }
 
 .name-inputs input {
   flex: 1;
   margin-right: 10px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .button-container {
@@ -56,6 +67,7 @@ textarea {
   border-radius: 4px;
   box-sizing: border-box;
   font-size: 15px;
+  font-family: 'Poppins', sans-serif;
 }
 
 button {
@@ -65,25 +77,41 @@ button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 
-button:hover {
-  background-color: #003f92;
+button:hover::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #ffde59;
+  bottom: 0;
+  left: 0;
+  animation: underline 0.3s forwards;
+}
+
+@keyframes underline {
+  from {
+    width: 0;
+    left: 50%;
+  }
+  to {
+    width: 100%;
+    left: 0;
+  }
 }
 
 header {
+  font-family: 'Poppins', sans-serif;
   background-color: #004AAD;
   color: #fff;
   padding: 10px 0;
   height: 150px;
-  position: relative;
-  font-family: 'Segoe UI', sans-serif;
+  position: fixed;
   width: 100%;
   top: 0;
-}
-
-.content {
-  padding-top: 10px; 
 }
 
 .header-container {
@@ -92,18 +120,10 @@ header {
   align-items: center;
 }
 
-.logo {
-  display: flex;
-  align-items: center; 
-  
-}
-
 .logo img {
-  position: ab;
-  width: 200px;
-  height: 200px;
+  width: 150px; /* Adjust logo size */
+  height: auto; /* Maintain aspect ratio */
   padding-left: 20px;
-  align-self: flex-start; 
 }
 
 nav ul {
@@ -111,7 +131,6 @@ nav ul {
   margin: 0;
   padding: 0;
   text-align: center;
-  padding-right: 100px;
   font-size: 20px;
 }
 
@@ -135,7 +154,8 @@ nav ul li a::after {
   background-color: #ffde59;
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%); /* Center the underline */
   transition: width 0.3s ease; /* Add transition effect for width */
 }
 
@@ -144,9 +164,8 @@ nav ul li a:hover::after {
 }
 
 .content {
-  flex: 1;
+  padding-top: 160px; /* Adjust according to header height */
   text-align: center;
-  padding-top: 80px; /* Adjust according to header height */
 }
 
 footer {
@@ -154,7 +173,6 @@ footer {
   color: #fff;
   text-align: center;
   padding: 20px 0;
-  margin-top: auto; /* Push the footer to the bottom */
 }
 
 /* Dropdown */
