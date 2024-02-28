@@ -121,7 +121,7 @@ header {
 }
 
 .logo img {
-  width: 150px; /* Adjust logo size */
+  width: 200px; /* Adjust logo size */
   height: auto; /* Maintain aspect ratio */
   padding-left: 20px;
 }
