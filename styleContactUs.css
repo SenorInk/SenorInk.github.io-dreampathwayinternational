@@ -1,6 +1,24 @@
-/* Basic styling for the columns */
+@font-face {
+    font-family: 'Poppins'; 
+    src: url('Poppins/Poppins-Light.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Poppinss'; 
+    src: url('Poppins/Poppins-Medium.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+  }
+
 body {
     padding-top: 100px;
+    font-family: 'Poppins' sans-serif;
+    font-size: 15px;
+}
+h2{
+    font-family: 'Poppinss' sans-serif;
 }
 
 .row {
