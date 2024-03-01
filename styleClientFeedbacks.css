@@ -307,3 +307,16 @@ header {
   color: #004AAD;
 
 }
+
+.testimonialss{
+  font-family: 'Poppins' sans-serif ;
+  color: #004AAD;
+  text-align: justify;  
+  margin: auto;
+  padding: 20px;
+  
+}
+
+.testimonialss .image{
+  padding: 20px;
+}
