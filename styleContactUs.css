@@ -12,40 +12,24 @@
     font-style: normal;
   }
 
-body {
+  body {
     padding-top: 100px;
-    font-family: 'Poppins' sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 15px;
     color: #004AAD;
-    
+    margin: 0; /* Add this line to remove the default margin */
 }
 
 h2{
     font-family: 'Poppinss' sans-serif;
 }
 
-.location-container {
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  flex-wrap: wrap; /* Allow items to wrap if needed */
-  gap: 20px; /* Add space between items */
-  margin: 10px;
-}
 
-.location {
-    width: 50%; /* Adjust width as needed */
-    max-width: 400px; /* Limit maximum width */
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    text-align: center;
-}
 header {
     font-family: 'Poppins', sans-serif;
     background-color: #004AAD;
     color: #fff;
-    padding: 0;
+    padding: 10px 0;
     height: 150px;
     position: fixed;
     width: 100%;
@@ -154,4 +138,24 @@ header {
   /* Display dropdown content on hover */
   .dropdown:hover .dropdown-content {
     display: block;
+  }
+
+  /* Maps */
+  .location-container {
+    padding-top: 50px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-wrap: wrap; /* Allow items to wrap if needed */
+    gap: 20px; /* Add space between items */
+    margin: 10px;
+  }
+  
+  .location {
+      width: 50%; /* Adjust width as needed */
+      max-width: 400px; /* Limit maximum width */
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      text-align: center;
   }
