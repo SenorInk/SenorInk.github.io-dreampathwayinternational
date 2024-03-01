@@ -191,8 +191,6 @@ iframe {
   white-space: nowrap;
   padding: 10px;
   overflow: hidden;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
 }
 
 .profile-card {
