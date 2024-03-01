@@ -1,39 +1,76 @@
-let slider = document.querySelector('.slider .list');
-let items = document.querySelectorAll('.slider .list .item');
-let next = document.getElementById('next');
-let prev = document.getElementById('prev');
-let dots = document.querySelectorAll('.slider .dots li');
+let sliderCanada = document.querySelector('.slider .list');
+let itemsCanada = document.querySelectorAll('.slider .list .item');
+let nextCanada = document.getElementById('nextCanada');
+let prevCanada = document.getElementById('prevCanada');
+let dotsCanada = document.querySelectorAll('.slider .dots li');
 
-let lengthItems = items.length - 1;
-let active = 0;
-next.onclick = function(){
-    active = active + 1 <= lengthItems ? active + 1 : 0;
-    reloadSlider();
+let sliderAustralia = document.querySelector('.sliders .lists');
+let itemsAustralia = document.querySelectorAll('.sliders .lists .item');
+let nextAustralia = document.getElementById('nextAustralia');
+let prevAustralia = document.getElementById('prevAustralia');
+let dotsAustralia = document.querySelectorAll('.sliders .dotss li');
+
+let lengthItemsCanada = itemsCanada.length - 1;
+let activeCanada = 0;
+let lengthItemsAustralia = itemsAustralia.length - 1;
+let activeAustralia = 0;
+
+nextCanada.onclick = function(){
+    activeCanada = activeCanada + 1 <= lengthItemsCanada ? activeCanada + 1 : 0;
+    reloadSliderCanada();
 }
-prev.onclick = function(){
-    active = active - 1 >= 0 ? active - 1 : lengthItems;
-    reloadSlider();
-}
-let refreshInterval = setInterval(()=> {next.click()}, 3000);
-function reloadSlider(){
-    slider.style.left = -items[active].offsetLeft + 'px';
-    // 
-    let last_active_dot = document.querySelector('.slider .dots li.active');
-    last_active_dot.classList.remove('active');
-    dots[active].classList.add('active');
-
-    clearInterval(refreshInterval);
-    refreshInterval = setInterval(()=> {next.click()}, 5000);
-
-    
+prevCanada.onclick = function(){
+    activeCanada = activeCanada - 1 >= 0 ? activeCanada - 1 : lengthItemsCanada;
+    reloadSliderCanada();
 }
 
-dots.forEach((li, key) => {
+nextAustralia.onclick = function(){
+    activeAustralia = activeAustralia + 1 <= lengthItemsAustralia ? activeAustralia + 1 : 0;
+    reloadSliderAustralia();
+}
+prevAustralia.onclick = function(){
+    activeAustralia = activeAustralia - 1 >= 0 ? activeAustralia - 1 : lengthItemsAustralia;
+    reloadSliderAustralia();
+}
+
+let refreshIntervalCanada = setInterval(()=> {nextCanada.click()}, 3000);
+let refreshIntervalAustralia = setInterval(()=> {nextAustralia.click()}, 3000);
+
+function reloadSliderCanada(){
+    sliderCanada.style.left = -itemsCanada[activeCanada].offsetLeft + 'px';
+    let lastActiveDotCanada = document.querySelector('.slider .dots li.active');
+    lastActiveDotCanada.classList.remove('active');
+    dotsCanada[activeCanada].classList.add('active');
+
+    clearInterval(refreshIntervalCanada);
+    refreshIntervalCanada = setInterval(()=> {nextCanada.click()}, 5000);
+}
+
+function reloadSliderAustralia(){
+    sliderAustralia.style.left = -itemsAustralia[activeAustralia].offsetLeft + 'px';
+    let lastActiveDotAustralia = document.querySelector('.sliders .dotss li.actives');
+    lastActiveDotAustralia.classList.remove('actives');
+    dotsAustralia[activeAustralia].classList.add('actives');
+
+    clearInterval(refreshIntervalAustralia);
+    refreshIntervalAustralia = setInterval(()=> {nextAustralia.click()}, 5000);
+}
+
+dotsCanada.forEach((li, key) => {
     li.addEventListener('click', ()=>{
-         active = key;
-         reloadSlider();
+         activeCanada = key;
+         reloadSliderCanada();
     })
 })
+
+dotsAustralia.forEach((li, key) => {
+    li.addEventListener('click', ()=>{
+         activeAustralia = key;
+         reloadSliderAustralia();
+    })
+})
+
 window.onresize = function(event) {
-    reloadSlider();
+    reloadSliderCanada();
+    reloadSliderAustralia();
 };

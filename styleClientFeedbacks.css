@@ -211,6 +211,82 @@ header {
     width: 30px;
     
 }
+
+.sliders{
+  width: 940px;
+  max-width: 940px;
+  height: 788px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+  border-radius: 0.5rem;
+}
+.sliders .lists{
+  position: absolute;
+  width: max-content;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  transition: 1s;
+  
+}
+.sliders .lists img{
+  width: 940px;
+  max-width: 940px;
+  height: 788px;
+  object-fit: cover;
+  
+}
+.sliders .buttonss{
+  position: absolute;
+  top: 45%;
+  left: 5%;
+  width: 90%;
+  color: #004AAD;
+  display: flex;
+  justify-content: space-between;
+  
+}
+.sliders .buttonss button{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #0000007c;
+  color: #ffffff;
+  border: none;
+  font-family: monospace;
+  font-weight: bold;
+  
+}
+.sliders .dotss{
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  color: #fff;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  
+}
+.sliders .dotss li{
+  list-style: none;
+  width: 10px;
+  height: 10px;
+  background-color: #242325c0;
+  margin: 10px;
+  border-radius: 20px;
+  transition: 0.5s;
+  
+}
+.sliders .dotss li.actives{
+  width: 30px;
+  
+}
 @media screen and (max-width: 940px){
     .slider{
         height: 788px;
