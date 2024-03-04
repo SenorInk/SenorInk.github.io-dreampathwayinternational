@@ -105,16 +105,17 @@ button:hover::after {
 }
 
 header {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppinsss', sans-serif;
   background-color: #004AAD;
-  color: #fff;
-  padding: 10px 0;
-  height: 150px;
+  color: #004AAD; /* Adjusted text color for better contrast */
+  padding: 0px 0;
+  height: 130px;
   position: fixed;
   width: 100%;
   top: 0;
+  z-index: 1000;
 }
-
+  
 .header-container {
   display: flex;
   justify-content: space-between;

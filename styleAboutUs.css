@@ -20,21 +20,22 @@ body, html {
 }
 
 header {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppinsss', sans-serif;
   background-color: #004AAD;
-  color: #fff;
-  padding: 10px 0;
-  height: 150px;
+  color: #004AAD; /* Adjusted text color for better contrast */
+  padding: 0px 0;
+  height: 130px;
   position: fixed;
   width: 100%;
   top: 0;
+  z-index: 1000;
 }
-
+  
 .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 25px; /* Adjust to move the logo upwards */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 25px; /* Adjust to move the logo upwards */
 }
 
 .logo img {
@@ -75,6 +76,7 @@ nav ul li a::after {
   left: 50%;
   transform: translateX(-50%); /* Center the underline */
   transition: width 0.3s ease; /* Add transition effect for width */
+
 }
 
 nav ul li a:hover::after {
