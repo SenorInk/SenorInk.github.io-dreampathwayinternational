@@ -37,10 +37,10 @@ body {
 
 /* Add styles for the small blue header */
 .small-header {
-  background-color: #004AAD; /* Blue color */
+  background-color: #1c243f;
   color: #fff;
   text-align: center;
-  padding: 15px 0;
+  padding-top: 3px;
 }
 
 .small-header.hidden {
@@ -50,10 +50,12 @@ body {
 header.sticky {
   height: 80px; /* Adjust the height of the sticky header */
   padding: 10px 0; /* Adjust padding for the sticky header */
+  box-shadow: 0 -6px 10px 5px rgba(0,0,0,1);
 }
 
 .header-container.sticky {
   padding-bottom: 10px; /* Adjust padding for the sticky header */
+  
 }
 
 .logo img.sticky {
@@ -62,7 +64,7 @@ header.sticky {
 
 header {
   font-family: 'Poppinsss', sans-serif;
-  background-color: #EDECEC;
+  background-color: #004AAD;
   color: #004AAD; /* Adjusted text color for better contrast */
   padding: 0px 0;
   height: 130px;
@@ -70,6 +72,7 @@ header {
   width: 100%;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 -6px 10px 5px rgba(0,0,0,1);
 }
   
 .header-container {
@@ -100,7 +103,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #004AAD;
+  color: #fff;
   text-decoration: none;
   padding: 5px 10px;
   position: relative;
@@ -124,7 +127,7 @@ nav ul li a:hover::after {
 }
 
 .content {
-  padding-top: 160px;
+  padding-top: 130px;
   text-align: center;
 }
 .home {
@@ -223,6 +226,7 @@ footer {
 
 .dropdown-content a:hover {
   background-color: #003f92f1;
+  
 }
 
 /* Display dropdown content on hover */
