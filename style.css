@@ -116,7 +116,7 @@ nav ul li a::after {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  transition: width 0.3s ease;
+  transition: width 0.6s ease;
 }
 
 nav ul li a:hover::after {
@@ -289,3 +289,21 @@ button:active {
   overflow: hidden;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
+.student-visa{
+  margin: 10px;
+
+}
+
+.text-visa-overlay{
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+}
+.visa-button{
+  color: #fff;
+  border-radius: 100px;
+  height: auto;
+  padding: 10px 35px;
+
+}
+
