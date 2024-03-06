@@ -71,7 +71,7 @@ header {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%); /* Center the underline */
-    transition: width 0.3s ease; /* Add transition effect for width */
+    transition: width 0.6s ease; /* Add transition effect for width */
   }
   
   nav ul li a:hover::after {
@@ -79,7 +79,8 @@ header {
   }
 
   nav ul li a:hover{
-    color: #ffde59a4;
+    color: #ffde59;
+    transition: color 0.7s ease;
   }
   
   .content {

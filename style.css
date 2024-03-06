@@ -126,6 +126,10 @@ nav ul li a:hover::after {
   width: 100%;
 }
 
+nav ul li a:hover{
+  color: #ffde59;
+  transition: color 0.7s ease;
+}
 .content {
   padding-top: 130px;
   text-align: center;
