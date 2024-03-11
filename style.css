@@ -298,20 +298,63 @@ button:active {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.student-visa{
-  margin: 10px;
-
+.container {
+  display: flex;
+  
+}
+.container > * {
+  margin-right: 8px; /* Adjust this value to set the desired spacing */
 }
 
-.text-visa-overlay{
-  font-family: 'Poppins', sans-serif;
+.container > *:last-child {
+  margin-right: 0px; /* Remove margin from the last item */
+}
+
+.container .student-visa,
+.container .permanent-residency,
+.container .permanent-residency-job-offer {
+  position: relative;
+  margin-bottom: 20px; /* Add some spacing between the containers */
+  overflow: hidden; /* Ensure the text overlay does not overflow */
   position: relative;
 }
-.visa-button{
-  color: #fff;
-  border-radius: 100px;
-  height: auto;
-  padding: 10px 35px;
 
+.container .imgs {
+  width: 100%; /* Make sure images fill their container */
+  height: auto; /* Maintain aspect ratio */
 }
+
+.container .text-overlay {
+  position: absolute;
+  top: 20px; /* Position the text overlay at the top */
+  left: 15vmax; /* Position the text overlay at the right */
+  width: calc(100% - 20px);
+  text-align: right;
+}
+
+.container .text-overlay h2 {
+  margin: 0; /* Remove margin from h2 */
+  font-size: 18px; /* Adjust font size as needed */
+}
+
+.container .overlay-button {
+  padding: 7px 30px;
+  background-color: #004baddc;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 100px;
+  position: absolute;
+  bottom: -23vmax; /* Position the button at the bottom */
+  right: 10px; /* Position the button at the right */
+}
+
+
+.container .overlay-button:hover {
+  background-color: #003f92; /* Adjust the hover background color */
+  color: #ffde59; /* Change the text color to yellow on hover */
+  transform: translateY(-2px);
+}
+
+
+
 

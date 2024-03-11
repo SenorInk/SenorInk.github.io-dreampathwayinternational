@@ -331,6 +331,7 @@ header {
 }
 
 .testimonialsperson p {
+  text-align: justify;
   font-size: 1rem;
   line-height: 1.5;
   color: #333;

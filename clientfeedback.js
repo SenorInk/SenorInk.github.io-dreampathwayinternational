@@ -1,3 +1,4 @@
+
 let sliderCanada = document.querySelector('.slider .list');
 let itemsCanada = document.querySelectorAll('.slider .list .item');
 let nextCanada = document.getElementById('nextCanada');
