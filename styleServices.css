@@ -89,12 +89,74 @@
     text-align: center;
   }
   
-  footer {
-    background-color: #004AAD;
-    color: #fff;
+
+h1{
+  
+  display: block;
+  position: relative;
+  padding: 0px;
+  padding-top: 10%;
+  text-align: center;
+  font-size: 50px;
+  color: #004AAD;
+  font-family: sans-serif;
+}
+
+/* Buttons */
+.button-container {
+   
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20 vh; /* Use the full height of the viewport */
+}
+
+.button {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  background-color: transparent;
+  width: 250px; /* Adjust the width as needed */
+  height: 300px; /* Same as the width to make it a square */
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow */
+  transition: transform 0.3s; /* Add transition for smooth scaling */
+  text-align: center; /* Center the text horizontally */
+  border-radius: 10px; /* Add rounded corners */
+}
+
+.button:hover {
+  transform: scale(1.1); /* Scale the button to 110% on hover */
+}
+
+.button img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.button span {
+    font-family: 'Poppins', sans-serif;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    padding: 20px 10px; /* Adjust the top and bottom padding */
     text-align: center;
-    padding: 20px 0;
-  }
+    background-color: #004AAD;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 20px; /* Set line height equal to height for vertical centering */
+    transition: color 0.3s, text-decoration 0.3s; /* Add transition for color and text decoration */
+}
+
+.button:hover span {
+  color: #ffde59; /* Change the text color to yellow on hover */
+}
   
   /* Dropdown */
   .dropdown {
@@ -135,12 +197,10 @@
     display: block;
   }
 
-  h1{
-    padding: 90px;
+  footer {
+    background-color: #004AAD;
+    color: #fff;
     text-align: center;
-    font-size: 50px;
-    color: #004AAD;
-    font-family: 'Poppins';
+    padding: 20px 0;
   }
-
   
