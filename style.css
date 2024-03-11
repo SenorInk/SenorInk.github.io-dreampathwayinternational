@@ -42,7 +42,10 @@ body {
   text-align: center;
   padding-top: 3px;
 }
-
+.small-header-text p{
+  position: relative;
+  font-size: 10px;
+}
 .small-header.hidden {
   display: none;
 }
