@@ -181,3 +181,26 @@ header {
   .icons img:hover {
     filter: brightness(100%); /* Invert the colors of the image when hovered */
   }
+
+  p{
+    font-family: 'Poppins',sans-serif;
+  }
+
+  .contact-info {
+    text-align: left;
+  }
+  
+  .contact-item {
+    display: inline-block;
+    margin: 0 20px; /* Adjust spacing between items */
+  }
+  
+  .contact-item p {
+    margin: 5px; /* Remove default margin */
+  }
+  
+  .contact-item span {
+    font-weight: bold;
+    width: 100px; /* Adjust width as needed for alignment */
+  }
+  
