@@ -161,3 +161,23 @@ header {
       border-radius: 5px;
       text-align: center;
   }
+
+  .icons{
+    display: flex;
+    justify-content: center;
+    
+  }
+  .icons img{
+    margin: 0 5px;
+    padding-top: 5px; 
+    position: relative; 
+    width: 30px; 
+    height: 30px;
+    filter: brightness(0%);
+    transition: filter 0.5s;
+
+  }
+
+  .icons img:hover {
+    filter: brightness(100%); /* Invert the colors of the image when hovered */
+  }
