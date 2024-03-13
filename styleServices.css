@@ -129,6 +129,7 @@ h1{
    
   display: flex;
   justify-content: center;
+  padding: 2%;
   align-items: center;
   background-color: aliceblue;
   height: 25 vh; /* Use the full height of the viewport */
@@ -149,10 +150,14 @@ h1{
   border-radius: 10px; /* Add rounded corners */
 }
 
-.button:hover {
-  transform: scale(1.1); /* Scale the button to 110% on hover */
+.button:hover{
+  transform: scale(1.1, 1.1); /* Scale the button to 110% on hover */
 }
 
+.button-container:hover > .button:not(:hover){
+  filter: blur(1.5px);
+  transform: scale(0.9, 0.9);
+}
 .button img {
   display: block;
   width: 100%;
