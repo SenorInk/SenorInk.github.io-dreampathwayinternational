@@ -305,7 +305,7 @@ header {
 }
 
 .testimonial {
-  flex: 0 0 auto; /* Ensure each testimonial doesn't grow or shrink */
+  flex: 0 0 930px; /* Ensure each testimonial doesn't grow or shrink */
   width: 50%; /* Make each testimonial take up half of the container width */
   padding: 10px;
   display: flex;
