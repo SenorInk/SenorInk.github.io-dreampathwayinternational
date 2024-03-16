@@ -139,230 +139,110 @@ header {
     display: block;
   }
 
-  .slider{
-    width: 940px;
-    max-width: 940px;
-    height: 788px;
-    margin: auto;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
-    border-radius: 0.5rem;
-}
-.slider .list{
-    position: absolute;
-    width: max-content;
-    height: 100%;
-    left: 0;
-    top: 0;
-    display: flex;
-    transition: 1s;
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f6f3ea;
+  }
+  .testimonial {
+    padding: 80px 0;
+    margin: 0 auto;
+  }
+  .sec-heading {
+    margin-bottom: 60px;
+  }
+  .sec-heading h6 {
+    font-family: allura;
+    font-weight: 900;
+    font-size: 80px;
     
-}
-.slider .list img{
-    width: 940px;
-    max-width: 940px;
-    height: 788px;
-    object-fit: cover;
-    
-}
-.slider .buttons{
-    position: absolute;
-    top: 45%;
-    left: 5%;
-    width: 90%;
-    color: #004AAD;
-    display: flex;
-    justify-content: space-between;
-    
-}
-.slider .buttons button{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #0000007c;
-    color: #ffffff;
-    border: none;
-    font-family: monospace;
-    font-weight: bold;
-    
-}
-.slider .dots{
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-    color: #fff;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    
-}
-.slider .dots li{
-    list-style: none;
-    width: 10px;
-    height: 10px;
-    background-color: #242325c0;
-    margin: 10px;
+  }
+  .single-box {
+    border: 5px solid #e6f0fa;
+    padding: 50px 30px 0px;
     border-radius: 20px;
-    transition: 0.5s;
-    
-}
-.slider .dots li.active{
-    width: 30px;
-    
-}
+    background: #fff;
+    overflow: hidden;
+    height: 750px;
 
-.sliders{
-  width: 940px;
-  max-width: 940px;
-  height: 788px;
-  margin: auto;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
-  border-radius: 0.5rem;
-}
-.sliders .lists{
-  position: absolute;
-  width: max-content;
-  height: 100%;
-  left: 0;
-  top: 0;
-  display: flex;
-  transition: 1s;
-  
-}
-.sliders .lists img{
-  width: 940px;
-  max-width: 940px;
-  height: 788px;
-  object-fit: cover;
-  
-}
-.sliders .buttonss{
-  position: absolute;
-  top: 45%;
-  left: 5%;
-  width: 90%;
-  color: #004AAD;
-  display: flex;
-  justify-content: space-between;
-  
-}
-.sliders .buttonss button{
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #0000007c;
-  color: #ffffff;
-  border: none;
-  font-family: monospace;
-  font-weight: bold;
-  
-}
-.sliders .dotss{
-  position: absolute;
-  bottom: 10px;
-  left: 0;
-  color: #fff;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  
-}
-.sliders .dotss li{
-  list-style: none;
-  width: 10px;
-  height: 10px;
-  background-color: #242325c0;
-  margin: 10px;
-  border-radius: 20px;
-  transition: 0.5s;
-  
-}
-.sliders .dotss li.actives{
-  width: 30px;
-  
-}
-@media screen and (max-width: 940px){
-    .slider{
-        height: 788px;
+  }
+  .img-area {
+    margin: 45px 0 20px;
+  }
+  .single-box img {
+    max-width: 100px;
+    border-radius: 50%;
+    margin: 0 auto
+  }
+  .single-box h4 {
+ 
+    font-weight: 600;
+    margin: 0;
+    font-family: 'Allura', cursive;
+    font-size: 35px;
+  }
+
+  .single-box .img-area {
+    width: 30%;
+    float: left;
+    margin: 0
+  }
+  .single-box .content {
+    padding-top: 10px;
+    width: 100%;
+    float: left;
+    text-align: justify;
+  }
+  .single-box p {
+    margin: 20px 0px 25px;
+    line-height: 1.5;
+  }
+  .single-box h6{
+    color: #ffde59;
+  }
+  .testi-carousel-three .single-box {
+    border: 0;
+    padding: 0 50px;
+  }
+  .testi-carousel .owl-dots, .clients-carousel .owl-dots, .testi-carousel-three .owl-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -60px;
+    text-align: center;
+    width: 100%;
+  }
+  .testi-carousel .owl-dot, .clients-carousel .owl-dot, .testi-carousel-three .owl-dot {
+    width: 16px;
+    height: 16px;
+    background-color: #ddd;
+    display: inline-block;
+    margin: 0 6px;
+    text-align: center;
+    border-radius: 50%;
+  }
+  .testi-carousel .owl-dot.active, .clients-carousel .owl-dot.active, .testi-carousel-three .owl-dot.active {
+    background-color: rgb(63, 104, 240);
+  }
+  @media only screen and (min-width: 360px) and (max-width: 479px) {
+    .testimonial {
+      padding: 70px 0 130px;
     }
-}
-
-.testimonial-container {
-  padding-top: 100px;
-  display: flex;
-  flex-wrap: nowrap; /* Ensure all testimonials stay in a single row */
-  overflow-x: auto; /* Enable horizontal scrolling */
-  overflow-y: hidden; /* Hide vertical scrollbar */
-}
-
-.testimonial {
-  flex: 0 0 930px; /* Ensure each testimonial doesn't grow or shrink */
-  width: 50%; /* Make each testimonial take up half of the container width */
-  padding: 10px;
-  display: flex;
+  }
+  @media only screen and (min-width: 320px) and (max-width: 359px) {
+    .testimonial {
+      padding: 70px 0 130px;
+    }
+    .single-box {
+      padding: 50px 0 40px;
+    }
+    .single-box .img-area {
+      width: 100%;
+      float: none;
+    }
+    .single-box .content {
+      width: 100%;
+      float: none;
+    }
+  }
   
-}
-
-.testimonial-info {
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1; /* Allow the info section to grow */
-  padding: 10px;
-}
-
-.info-header {
-  display: flex;
-  align-items: center;
-}
-
-.testimonial-image {
-  
-  margin-right: 10px;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%; /* Make the image circular */
-  overflow: hidden; /* Ensure image stays within circular boundary */
-}
-
-.testimonial img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensure the image covers the circular boundary */
-  border-radius: 50%; /* Make the image circular */
-}
-
-.name-rating {
-  display: flex;
-  align-items: center;
-}
-
-.name {
-  
-  font-weight: bold;
-  margin-right: 5px; /* Adjust spacing between name and rating */
-}
-
-.rating {
-  color: #004AAD;
-}
-
-.paragraph {
-  text-align: justify;
-  margin-top: 10px; /* Adjust spacing */
-  overflow: hidden;
-  text-overflow: ellipsis; /* Add ellipsis for overflow */
-  display: -webkit-box;
-  -webkit-line-clamp: 15; /* Limit paragraph to 4 lines */
-  -webkit-box-orient: vertical;
-}
