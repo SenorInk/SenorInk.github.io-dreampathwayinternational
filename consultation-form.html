@@ -108,6 +108,18 @@
       </select>
     </div>
 
+    <div class="form-group">
+      <label for="dream-country">Dream Country</label>
+      <select id="dream-country" name="dream-country" required onchange="showOtherInput(this)">
+        <option value="">-Select-</option>
+        <option value="Australia">Australia</option>
+        <option value="Canada">Canada</option>
+        <option value="Australia-Canada">Australia & Canada</option>
+        <option value="Others">Others - Please indicate on the box below</option>
+      </select>
+      <input type="text" id="other-country" name="other-country" style="display: none;" placeholder="Please specify other country">
+    </div>
+
     <div class="button-container">
         <button type="submit">Submit</button>
     </div>
@@ -118,8 +130,8 @@
   
 </div>
 
-
 <script src="consultation-form.js"></script>
+
 </body>
 
 </html>
