@@ -1,32 +1,37 @@
 @font-face {
     font-family: 'Poppins'; 
-    src: url('Poppins/Poppins-Light.ttf') format('truetype'); 
+    src: url('Fonts/Poppins/Poppins-Light.ttf') format('truetype'); 
     font-weight: normal;
     font-style: normal;
   }
   
   @font-face {
     font-family: 'Poppinss'; 
-    src: url('Poppins/Poppins-Medium.ttf') format('truetype'); 
+    src: url('Fonts/Poppins/Poppins-Medium.ttf') format('truetype'); 
     font-weight: normal;
     font-style: normal;
   }
+  
+  @font-face {
+    font-family: 'Poppinsss'; 
+    src: url('Fonts/Poppins/Poppins-SemiBold.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'AlexBrush'; 
+    src: url('Fonts/Alex_Brush/AlexBrush-Regular.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+  }
+  
 
-  body {
-    padding-top: 100px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 15px;
-    color: #004AAD;
-    margin: 0; /* Add this line to remove the default margin */
-}
 
-h2{
-    font-family: 'Poppinss' sans-serif;
-}
 
 
 header {
-  font-family: 'Poppinsss', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: #004AAD;
   color: #004AAD; /* Adjusted text color for better contrast */
   padding: 0px 0;
@@ -194,8 +199,57 @@ header {
   }
 }
 
+.sticky-header {
+  position: fixed;  /* Make the header stick to the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1c243f; /* Or your desired background color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  z-index: 100; /* Ensure header is on top of content */
+  transition: top 0.3s ease-in-out; /* Add a smooth transition */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: right; /* Center the icons */
+  padding: 3px 0;
+  
+}
+
+.social-icons img {
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  filter: brightness(100%); /* Slightly grayed out */
+  transition: filter 0.3s ease-in-out;
+}
 
 
+/* Hide the header on scroll down: */
+.sticky-header.hide {
+  top: -80px; /* Adjust this value as needed to hide the entire header */
+} 
+
+@media (max-width: 768px) { 
+
+.social-icons {
+    /* Ensure icons remain visible on smaller screens */
+    display: flex; 
+}  
+} 
+
+body {
+  padding-top: 100px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  color: #004AAD;
+  margin: 0; /* Add this line to remove the default margin */
+}
+
+h2{
+  font-family: 'Poppins' sans-serif;
+}
   
   .content {
     padding-top: 160px; /* Adjust according to header height */
@@ -313,35 +367,3 @@ header {
     width: 100px; /* Adjust width as needed for alignment */
   }
   
-
-  .sticky-header {
-    position: fixed;  /* Make the header stick to the top */
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #1c243f; /* Or your desired background color */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
-    z-index: 100; /* Ensure header is on top of content */
-    transition: top 0.3s ease-in-out; /* Add a smooth transition */
-}
-
-.social-icons {
-    display: flex;
-    justify-content: right; /* Center the icons */
-    padding: 3px 0;
-    
-}
-
-.social-icons img {
-    width: 20px;
-    height: 20px;
-    margin: 0 5px;
-    filter: brightness(100%); /* Slightly grayed out */
-    transition: filter 0.3s ease-in-out;
-}
-
-
-/* Hide the header on scroll down: */
-.sticky-header.hide {
-    top: -80px; /* Adjust this value as needed to hide the entire header */
-} 
