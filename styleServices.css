@@ -85,7 +85,7 @@
   }
   
   .content {
-    padding-top: 160px; /* Adjust according to header height */
+    padding-top: 100; /* Adjust according to header height */
     text-align: center;
   }
   
@@ -141,8 +141,8 @@ h1{
   overflow: hidden;
   border: none;
   background-color: transparent;
-  width: 250px; /* Adjust the width as needed */
-  height: 300px; /* Same as the width to make it a square */
+  width: 350px; /* Adjust the width as needed */
+  height: 400px; /* Same as the width to make it a square */
   margin: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow */
   transition: transform 0.3s; /* Add transition for smooth scaling */
@@ -224,6 +224,39 @@ h1{
   .dropdown:hover .dropdown-content {
     display: block;
   }
+  
+  .button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+/*Description*/
+.description-container {
+  width: 100%;
+  text-align: center;
+}
+
+.description {
+  display: flex;
+  height: 700px;
+  flex-direction: row; /* Arrange items horizontally */
+  align-items: center; /* Center items vertically */
+  background-color: #abc6e9f1; /* Set the background color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  padding: 20px; /* Add padding to create space between content and edges */
+}
+
+.description img {
+  max-width: 30%;
+  padding-left: 10%;
+  height: auto;
+  margin-right: 20px; /* Add space between image and text */
+}
+
+.description p {
+  flex: 1; /* Allow text to take remaining space */
+}
 
   footer {
     background-color: #004AAD;
