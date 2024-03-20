@@ -8,6 +8,26 @@
 </head>
 <body>
   <header>
+    <div class="sticky-header">
+      <div class="social-icons">
+        <a href="https://www.facebook.com/dreampathway" target="_blank" >
+            <img src="Image/Icons/White/facebook-svgrepo-com (1).png" alt="">
+          </a>
+
+          <a href="https://www.linkedin.com/company/dream-pathway-international/" target="_blank">
+            <img src="Image/Icons/White/linkedin-svgrepo-com.png" alt="">
+          </a>
+          
+          <a href="https://www.youtube.com/@DreamPathwayOfficial" target="_blank">
+            <img src="Image/Icons/White/youtube-svgrepo-com.png" alt="">
+          </a>
+
+          <a href="https://www.tiktok.com/@dreampathway" target="_blank">
+            <img src="Image/Icons/White/tiktok-svgrepo-com.png" alt="">
+          </a>
+      </div>
+  </div>
+
     <div class="header-container">
       <a href="home.html" class="logo"><img src="Image/Logo/White.png" alt="Dream Pathway Logo" style="position: relative;"></a>
       <nav class="headertext">
@@ -209,6 +229,19 @@
     header.classList.toggle('hidden'); // Toggle the 'hidden' class
     menuToggle.setAttribute('aria-expanded', drawerMenu.classList.contains('open'));
   });
+
+  // At the bottom of your existing JavaScript, or in a new <script> tag
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('.sticky-header');
+    let scrollPosition = window.scrollY; 
+
+    if (scrollPosition > 50) {  // Adjust threshold when to start hiding
+        header.classList.add('hide');
+    } else {
+        header.classList.remove('hide');
+    }
+});
+
 </script>
 </body>
 </html>
