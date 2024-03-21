@@ -123,68 +123,6 @@ h1{
   color: #fff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
-
-/* Buttons */
-.button-container {
-   
-  display: flex;
-  justify-content: center;
-  padding: 2%;
-  align-items: center;
-  background-color: aliceblue;
-  height: 25 vh; /* Use the full height of the viewport */
-}
-
-.button {
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
-  border: none;
-  background-color: transparent;
-  width: 350px; /* Adjust the width as needed */
-  height: 400px; /* Same as the width to make it a square */
-  margin: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow */
-  transition: transform 0.3s; /* Add transition for smooth scaling */
-  text-align: center; /* Center the text horizontally */
-  border-radius: 10px; /* Add rounded corners */
-}
-
-.button:hover{
-  transform: scale(1.1, 1.1); /* Scale the button to 110% on hover */
-}
-
-.button-container:hover > .button:not(:hover){
-  filter: blur(1.5px);
-  transform: scale(0.9, 0.9);
-}
-.button img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.button span {
-    font-family: 'Poppins', sans-serif;
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 50px;
-    padding: 20px 10px; /* Adjust the top and bottom padding */
-    text-align: center;
-    background-color: #004AAD;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 20px; /* Set line height equal to height for vertical centering */
-    transition: color 0.3s, text-decoration 0.3s; /* Add transition for color and text decoration */
-}
-
-.button:hover span {
-  color: #ffde59; /* Change the text color to yellow on hover */
-}
   
   /* Dropdown */
   .dropdown {
@@ -224,12 +162,6 @@ h1{
   .dropdown:hover .dropdown-content {
     display: block;
   }
-  
-  .button-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
 
 /*Description*/
 .description-container {
@@ -239,23 +171,31 @@ h1{
 
 .description {
   display: flex;
-  height: 700px;
-  flex-direction: row; /* Arrange items horizontally */
-  align-items: center; /* Center items vertically */
-  background-color: #abc6e9f1; /* Set the background color */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-  padding: 20px; /* Add padding to create space between content and edges */
+  align-items: center;
+  background-color: #abc6e9f1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding-top: 20%;
+  padding-bottom: 20%;
 }
 
 .description img {
   max-width: 30%;
-  padding-left: 10%;
-  height: auto;
-  margin-right: 20px; /* Add space between image and text */
+  padding-left: 5%;
+  padding-right: 2%; /* Add space between image and text */
+}
+
+.description h2 {
+  font-family: sans-serif;
+  text-align: left;
+  color: #004AAD; /* Adjusted text color for better contrast */
+  width: 100%;
 }
 
 .description p {
-  flex: 1; /* Allow text to take remaining space */
+  font-family: sans-serif;
+  text-align: left;
+  color: 0000; /* Adjusted text color for better contrast */
+  width: 85%;
 }
 
   footer {

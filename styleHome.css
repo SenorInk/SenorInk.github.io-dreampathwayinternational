@@ -247,7 +247,7 @@
   } 
 
   .content {
-    padding-top: 130px;
+    padding-top:150 px;
     text-align: center;
   }
   .home {
@@ -426,50 +426,68 @@
     margin-right: 0px; /* Remove margin from the last item */
   }
   
-  .container .student-visa,
-  .container .permanent-residency,
-  .container .permanent-residency-job-offer {
-    position: relative;
-    margin-bottom: 20px; /* Add some spacing between the containers */
-    overflow: hidden; /* Ensure the text overlay does not overflow */
-    position: relative;
-  }
-  
-  .container .imgs {
-    width: 100%; /* Make sure images fill their container */
-    height: auto; /* Maintain aspect ratio */
-  }
-  
-  .container .text-overlay {
+/* Buttons */
+.button-container {
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+  align-items: center;
+  background-color: aliceblue;
+  height: 25 vh; /* Use the full height of the viewport */
+  justify-content: center;
+
+}
+
+.button {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  background-color: transparent;
+  width: 350px; /* Adjust the width as needed */
+  height: 400px; /* Same as the width to make it a square */
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow */
+  transition: transform 0.3s; /* Add transition for smooth scaling */
+  text-align: center; /* Center the text horizontally */
+  border-radius: 10px; /* Add rounded corners */
+}
+
+.button:hover{
+  transform: scale(1.1, 1.1); /* Scale the button to 110% on hover */
+}
+
+.button-container:hover > .button:not(:hover){
+  filter: blur(1.5px);
+  transform: scale(0.9, 0.9);
+}
+.button img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.button span {
+    font-family: 'Poppins', sans-serif;
+    display: block;
     position: absolute;
-    top: 20px; /* Position the text overlay at the top */
-    left: 15vmax; /* Position the text overlay at the right */
-    width: calc(100% - 20px);
-    text-align: right;
-  }
-  
-  .container .text-overlay h2 {
-    margin: 0; /* Remove margin from h2 */
-    font-size: 18px; /* Adjust font size as needed */
-  }
-  
-  .container .overlay-button {
-    padding: 7px 30px;
-    background-color: #004baddc;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 100px;
-    position: absolute;
-    bottom: -23vmax; /* Position the button at the bottom */
-    right: 10px; /* Position the button at the right */
-  }
-  
-  
-  .container .overlay-button:hover {
-    background-color: #003f92; /* Adjust the hover background color */
-    color: #ffde59; /* Change the text color to yellow on hover */
-    transform: translateY(-2px);
-  }
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    padding: 20px 10px; /* Adjust the top and bottom padding */
+    text-align: center;
+    background-color: #004AAD;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 20px; /* Set line height equal to height for vertical centering */
+    transition: color 0.3s, text-decoration 0.3s; /* Add transition for color and text decoration */
+}
+
+.button:hover span {
+  color: #ffde59; /* Change the text color to yellow on hover */
+}
   .icons{
     display: flex;
     justify-content: flex-end;
