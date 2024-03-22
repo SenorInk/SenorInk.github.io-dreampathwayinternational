@@ -354,7 +354,7 @@
     display: block;
   }
   
-  button {
+  .homeButton {
     background-color: #004AAD;
     color: #fff;
     font-family: 'Poppinss', sans-serif;
@@ -368,7 +368,7 @@
     transition: background-color 0.3s ease, transform 0.2s ease;
   }
   
-  button::before {
+  .homeButton::before {
     content: '';
     position: absolute;
     bottom: 0;
@@ -380,18 +380,18 @@
     transition: transform 0.3s ease;
   }
   
-  button:hover {
+  .homeButton:hover {
     background-color: #003f92; /* Adjust the hover background color */
     color: #ffde59; /* Change the text color to yellow on hover */
     transform: translateY(-2px);
   }
   
-  button:hover::before {
+  .homeButton:hover::before {
     transform: scaleX(1);
   }
   
   
-  button:active {
+  .homeButton:active {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
@@ -400,19 +400,7 @@
     
   }
   
-  .homeButton {
-    background-color: #004AAD;
-    color: #fff;
-    font-family: 'Poppinss', sans-serif;
-    font-size: 18px; /* Adjust the font size as needed */
-    padding: 10px 40px; /* Adjust the padding for width and height */
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
+
   
   .container {
     display: flex;
