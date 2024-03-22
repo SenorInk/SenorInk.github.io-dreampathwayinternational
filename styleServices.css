@@ -210,26 +210,38 @@ h1{
   width: 85%;
 }
 
+.description-container {
+  display: flex;
+  justify-content: center;
+}
+
+
+.description2 div {
+  flex: 1;
+}
+
 .description2 img {
   max-width: 30%;
-  padding-left: 5%;
-  padding-right: 2%; /* Add space between image and text */
+  padding-left: 4%;
+  padding-right: 5%; /* Add space between image and text */
 }
 
 .description2 h2 {
+  padding-left: 10%;
   font-size: xxx-large;
   font-family: sans-serif;
   text-align: left;
   color: #004AAD; /* Adjusted text color for better contrast */
-  width: 100%;
+  margin: 0; /* Remove default margin */
 }
 
 .description2 p {
+  padding-left: 10%;
   font-family: sans-serif;
   text-align: left;
-  color: 0000; /* Adjusted text color for better contrast */
+  color: #000; /* Adjusted text color for better contrast */
   line-height: 1.5; /* Adjust the value to increase or decrease the line spacing */
-  width: 85%;
+  margin: 0; /* Remove default margin */
 }
 
   footer {
