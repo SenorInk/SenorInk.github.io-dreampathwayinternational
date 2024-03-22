@@ -172,11 +172,21 @@ h1{
 .description {
   display: flex;
   align-items: center;
-  background-color: #abc6e9f1;
+  background-color: #e1eefff1;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding-top: 20%;
   padding-bottom: 20%;
 }
+
+.description2 {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding-top: 20%;
+  padding-bottom: 20%;
+}
+
 
 .description img {
   max-width: 30%;
@@ -185,6 +195,7 @@ h1{
 }
 
 .description h2 {
+  font-size: xxx-large;
   font-family: sans-serif;
   text-align: left;
   color: #004AAD; /* Adjusted text color for better contrast */
@@ -195,6 +206,29 @@ h1{
   font-family: sans-serif;
   text-align: left;
   color: 0000; /* Adjusted text color for better contrast */
+  line-height: 1.5; /* Adjust the value to increase or decrease the line spacing */
+  width: 85%;
+}
+
+.description2 img {
+  max-width: 30%;
+  padding-left: 5%;
+  padding-right: 2%; /* Add space between image and text */
+}
+
+.description2 h2 {
+  font-size: xxx-large;
+  font-family: sans-serif;
+  text-align: left;
+  color: #004AAD; /* Adjusted text color for better contrast */
+  width: 100%;
+}
+
+.description2 p {
+  font-family: sans-serif;
+  text-align: left;
+  color: 0000; /* Adjusted text color for better contrast */
+  line-height: 1.5; /* Adjust the value to increase or decrease the line spacing */
   width: 85%;
 }
 
