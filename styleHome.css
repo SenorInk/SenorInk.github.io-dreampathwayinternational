@@ -216,7 +216,7 @@
   }
   
   .social-icons {
-    margin-top: 6px;
+    margin-top: 1px;
     display: flex;
     justify-content: right; /* Center the icons */
     padding: 0px 0;
@@ -225,10 +225,9 @@
   
   .social-icons img {
     
-    width: 21px;
-    height: 21px;
-    margin: 0 6px;
-    filter: brightness(100%); /* Slightly grayed out */
+    width: 18px;
+    height: 18px;
+    margin: 0 5px;
     transition: filter 0.3s ease-in-out;
   }
   
@@ -247,7 +246,8 @@
   } 
 
   .content {
-    padding-top:150 px;
+
+    padding-top: 120px;
     text-align: center;
   }
   .home {
