@@ -121,7 +121,7 @@ body {
   width: 800px;
   height: 600px;
   border-radius: 2rem;
-
+  object-fit: contain; /* Prevents image stretching */
 }
 
 .tranding-slide .tranding-slide-content {

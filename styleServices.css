@@ -167,24 +167,26 @@ h1{
 .description-container {
   width: 100%;
   text-align: center;
+  position: relative; /* Make the container relative */
+
 }
 
 .description {
   display: flex;
   align-items: center;
   background-color: #e1eefff1;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding-top: 20%;
-  padding-bottom: 20%;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
 .description2 {
   display: flex;
   align-items: center;
   background-color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding-top: 20%;
-  padding-bottom: 20%;
+  /* Remove the box shadow */
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
 
@@ -208,11 +210,6 @@ h1{
   color: 0000; /* Adjusted text color for better contrast */
   line-height: 1.5; /* Adjust the value to increase or decrease the line spacing */
   width: 85%;
-}
-
-.description-container {
-  display: flex;
-  justify-content: center;
 }
 
 
@@ -243,6 +240,31 @@ h1{
   line-height: 1.5; /* Adjust the value to increase or decrease the line spacing */
   margin: 0; /* Remove default margin */
 }
+
+
+.button-container {
+  position: absolute; /* Position absolutely within its parent */
+  bottom: 10px; 
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  width: 100%; /* Make the container span the full width */
+  text-align: center; /* Center the button within its container*/
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #004AAD;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #003f92;
+}
+
 
   footer {
     background-color: #004AAD;
