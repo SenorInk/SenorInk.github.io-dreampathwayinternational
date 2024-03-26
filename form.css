@@ -9,6 +9,10 @@
 }
 
 body {
+  background-image: url("Image/Designs/DREAMPATHWAY WEB UI .png"); /* Path to your image */
+  background-repeat: no-repeat;
+  background-size: cover; /* Make the image cover the entire screen */
+  background-attachment: fixed; 
   padding-top: 190px;
   font-family: Arial, sans-serif;
   display: flex;
@@ -20,18 +24,20 @@ body {
 }
 
 .form-container {
-  max-width: 600px;
+
+  width: 50rem;
   margin: auto;
-  background-color: #f4f4f4;
+  background-color: rgba(255, 255, 255, 0.8);
   padding: 20px;
-  border-radius: 10px;
   box-shadow: 0 1.2rem 1.2rem -0.75rem hsla(54, 700%, 50%, 0.658);
-  border-radius: .5rem;
+  border-radius: 1.5rem;
   font-family: 'Poppins', sans-serif;
   font-size: 20px;
+  z-index: 1;
 }
 
 h2 {
+  text-align: center;
   margin-bottom: 20px;
 }
 

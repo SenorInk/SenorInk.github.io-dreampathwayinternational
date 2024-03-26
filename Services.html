@@ -14,7 +14,7 @@
     <nav class="headertext">
       <ul>
         <li><a href="home.html">Home</a></li>
-        <li><a href="#services">Services</a></li>
+        <li><a href="#services" class="active">Services</a></li>
         <li class="dropdown">
           <a href="AboutUs.html" class="dropbtn">About Us <span id="arrow">▼</span></a>
           <div class="dropdown-content">
@@ -114,5 +114,16 @@
   </div>
 </div>
 </div>
+<script>const navLinks = document.querySelectorAll('.headertext ul li a');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      // Remove 'active' from other links 
+      navLinks.forEach(otherLink => otherLink.classList.remove('active')); 
+      // Add 'active' to the clicked link
+      link.classList.add('active');
+    });
+  });
+  </script>
 </body>
 </html>
