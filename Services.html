@@ -60,7 +60,7 @@
       <p>Becoming an international student in Canada, New York, or Australia allows you to remain in their respective countries for the purpose of full-time study at an educational institution, in line with your enrollment. With this visa, you can take part in an eligible course of study and work part-time.</p>
       <p>In Canada, you can apply for a Post Graduate Work Permit (PGWP) which allows you to stay longer and look for a possible employment or a sponsor for your permanent residency.</p>
       <div class="button-container">
-        <a href="#" class="button">Learn More</a>
+        <a href="consultation-form.html" class="button" id="learn-more-student" data-service="Student Visa Application">Learn More</a>
       </div>
     </div>
   </div>
@@ -76,7 +76,7 @@
     </div>
     <img src="Image/Designs/soh.png" alt="Description Image">
     <div class="button-container">
-      <a href="#" class="button">Learn More</a>
+      <a href="consultation-form.html" class="button" id="learn-more-prwjo" data-service="Permanent Residency Application with job search support">Learn More</a>
     </div>
     </div>
   </div>
@@ -92,7 +92,7 @@
       <p>Express Entry is a system used by the Canadian government to manage Canadian permanent residence applications for filling labour gaps through certain economic immigration programs. This is the most suitable application process for skilled immigrants who want to settle in Canada permanently and take part in their economy.</p>
       <p>Similarly, You can become a permanent resident of Australia by applying for and being granted a permanent visa that allows you to remain in Australia indefinitely. The most common permanent visas include some skilled work and family visas.</p>
       <div class="button-container">
-        <a href="#" class="button">Learn More</a>
+        <a href="consultation-form.html" class="button" id="learn-more-pr" data-service="Permanent Residency Application">Learn More</a>
       </div>
     </div>
   </div>
@@ -114,7 +114,8 @@
   </div>
 </div>
 </div>
-<script>const navLinks = document.querySelectorAll('.headertext ul li a');
+<script>
+  const navLinks = document.querySelectorAll('.headertext ul li a');
 
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
@@ -122,6 +123,19 @@
       navLinks.forEach(otherLink => otherLink.classList.remove('active')); 
       // Add 'active' to the clicked link
       link.classList.add('active');
+    });
+  });
+
+  const learnMoreButtons = document.querySelectorAll('.button[data-service]');
+
+    learnMoreButtons.forEach(button => {
+    button.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent default link behavior
+
+        const service = button.dataset.service;
+        const consultationFormUrl = 'consultation-form.html?service=' + encodeURIComponent(service);
+
+        window.location.href = consultationFormUrl; 
     });
   });
   </script>

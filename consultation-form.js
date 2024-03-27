@@ -5,6 +5,12 @@ document.addEventListener("DOMContentLoaded", function () {
     var nearestOfficeSelect = document.getElementById("nearest-office");
     var dreamCountrySelect = document.getElementById("dream-country");
 
+    dreamCountrySelect.addEventListener("change", function () {
+      const selectOption = dreamCountrySelect.options[0]; 
+      
+      selectOption.disabled = this.value !== ""; 
+    });  
+
     
     educationSelect.addEventListener("change", function () {
       disableSelectOption(educationSelect, "");
@@ -43,3 +49,18 @@ document.addEventListener("DOMContentLoaded", function () {
       otherInput.removeAttribute('required'); // remove the required attribute
     }
   }
+
+const urlParams = new URLSearchParams(window.location.search);
+const service = urlParams.get('service');
+
+if (service) {
+    const servicesSelect = document.getElementById('services');
+    const options = servicesSelect.querySelectorAll('option');
+
+    for (let i = 0; i < options.length; i++) {
+        if (options[i].value === service) {
+            options[i].selected = true;
+            break; // Stop searching once the service is found
+        }
+    }
+}
