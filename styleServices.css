@@ -272,6 +272,7 @@ h1{
   position: absolute;
   font-family: 'AlexBrush', sans-serif;
   font-size: 125px;
+  letter-spacing: 21px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -322,8 +323,8 @@ h1{
 .description-container {
   width: 100%;
   text-align: center;
-  position: relative; /* Make the container relative */
-
+  position: relative;
+  padding-top: 0; /* Remove the top padding */
 }
 
 .description {
@@ -347,23 +348,27 @@ h1{
 
 .description img {
   max-width: 30%;
-  padding-left: 5%;
-  padding-right: 2%; /* Add space between image and text */
+  padding-left: 4%;
+  padding-right: 5%; /* Add space between image and text */
 }
 
 .description h2 {
+  padding-left: 10%;
   font-size: xxx-large;
   font-family: sans-serif;
   text-align: left;
   color: #004AAD; /* Adjusted text color for better contrast */
-  width: 100%;
+  margin: 0; /* Remove default margin */
+
 }
 
 .description p {
+  padding-left: 10%;
   font-family: sans-serif;
   text-align: left;
-  color: 0000; /* Adjusted text color for better contrast */
+  color: #000; /* Adjusted text color for better contrast */
   line-height: 1.5; /* Adjust the value to increase or decrease the line spacing */
+  margin: 0; /* Remove default margin */
   width: 85%;
 }
 
@@ -374,26 +379,23 @@ h1{
 
 .description2 img {
   max-width: 30%;
-  padding-left: 4%;
-  padding-right: 5%; /* Add space between image and text */
+  padding-left: 5%;
+  padding-right: 2%; /* Add space between image and text */
 }
 
 .description2 h2 {
-  padding-left: 10%;
   font-size: xxx-large;
   font-family: sans-serif;
   text-align: left;
   color: #004AAD; /* Adjusted text color for better contrast */
-  margin: 0; /* Remove default margin */
+  width: 100%;
 }
 
 .description2 p {
-  padding-left: 10%;
   font-family: sans-serif;
   text-align: left;
-  color: #000; /* Adjusted text color for better contrast */
+  color: 0000; /* Adjusted text color for better contrast */
   line-height: 1.5; /* Adjust the value to increase or decrease the line spacing */
-  margin: 0; /* Remove default margin */
   width: 85%;
 }
 
