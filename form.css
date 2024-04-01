@@ -1,9 +1,20 @@
-/* form.css */
-
-
 @font-face {
   font-family: 'Poppins'; 
-  src: url('Poppins/Poppins-Light.ttf') format('truetype'); 
+  src: url('Fonts/Poppins/Poppins-Light.ttf') format('truetype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppinss'; 
+  src: url('Fonts/Poppins/Poppins-Medium.ttf') format('truetype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppinsss'; 
+  src: url('Fonts/Poppins/Poppins-SemiBold.ttf') format('truetype'); 
   font-weight: normal;
   font-style: normal;
 }
@@ -111,7 +122,7 @@ button:hover::after {
 }
 
 header {
-  font-family: 'Poppinsss', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: #004AAD;
   color: #004AAD; /* Adjusted text color for better contrast */
   padding: 0px 0;
@@ -128,53 +139,201 @@ header {
   align-items: center;
   padding-bottom: 25px; /* Adjust to move the logo upwards */
 }
+  
+  .logo img {
+    margin-top: 30px;
+    width: 200px; /* Adjust logo size */
+    height: auto; /* Maintain aspect ratio */
+    padding-left: 40px; 
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding-top: 40px;
+    text-align: center;
+    font-size: 20px;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    position: relative;
+  }
+  
+  nav ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #ffde59;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Center the underline */
+    transition: width 0.3s ease; /* Add transition effect for width */
+  }
+  
+  nav ul li a:hover::after {
+    width: 100%;
+  }
 
-.logo img {
-  margin-top: 30px;
-  width: 200px; /* Adjust logo size */
-  height: auto; /* Maintain aspect ratio */
-  padding-left: 40px;
-}
+  /* ... Other styles ... */
 
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding-top: 40px;
-  text-align: center;
-  font-size: 20px;
-}
-
-nav ul li {
-  display: inline;
-  margin: 0 10px;
-}
-
-nav ul li a {
+/* Drawer menu */
+.drawer-menu {
+  display: none; /* Initially hide the menu */
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px; /* Adjust width of the drawer */
+  height: 100%;
+  background-color: #004AAD;
   color: #fff;
-  text-decoration: none;
-  padding: 5px 10px;
-  position: relative;
+  padding: 20px;
+  overflow-y: auto; /* Add scroll when content exceeds height */
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.3); 
+  z-index: 2000; /* Ensure drawer is above other content */
+  transition: transform 0.3s ease-in-out; /* Add transition */
+  z-index: 2000; 
 }
 
-nav ul li a::after {
-  content: '';
+.drawer-menu .dropdown-content {
+  display: none; 
+  position: relative; /* Changed from absolute */
+  top: 0; /* Align the dropdown below its parent */
+  left: 0; /* Position the dropdown relative to its parent (the dropdown list item) */
+  background-color: #003f92f1;
+  min-width: 100%; /* Make the dropdown content take up the full width */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* (Optional) Add shadow */
+  z-index: 3000; /* Ensure visibility on top of other drawer items */
+}
+
+.drawer-menu .dropdown:hover .dropdown-content {
   display: block;
-  width: 0;
-  height: 2px;
-  background-color: #ffde59;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%); /* Center the underline */
-  transition: width 0.3s ease; /* Add transition effect for width */
 }
 
-nav ul li a:hover::after {
-  width: 100%;
+.drawer-menu.open {
+  transform: translateX(0); /* Move menu to the right edge */
 }
+
+.drawer-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.drawer-menu li a {
+  color: #fff;
+  display: block;
+  padding: 10px 0px;
+  text-decoration: none;
+  
+}
+
+.menu-toggle {
+  margin-left: 20px;
+  display: none; /* Hide by default on larger screens */
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  position: relative; /* To position lines relatively*/
+  width: 40px; /* Adjust width if needed */
+  height: 30px; /* Adjust height if needed */
+  z-index: 2001;
+}
+
+.menu-toggle .hamburger-line {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+}
+
+
+/* 'X' (close) style - Activated by JavaScript */
+.menu-toggle.open .hamburger-line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.open .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open .hamburger-line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+/* Responsive layout - show menu button on smaller screens */
+@media (max-width: 1259px) { 
+  header .headertext{
+    display: none;
+  }
+  .menu-toggle {
+    display: block;
+    position: absolute; /* Position button within header */
+    top: 30px; 
+    right: 30px;
+  }
+
+  .drawer-menu.open {
+    display: block;
+  }
+}
+
+.sticky-header {
+  position: fixed;  /* Make the header stick to the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1c243f; /* Or your desired background color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  z-index: 100; /* Ensure header is on top of content */
+  transition: top 0.3s ease-in-out; /* Add a smooth transition */
+}
+
+.social-icons {
+  margin-top: 1px;
+  display: flex;
+  justify-content: right; /* Center the icons */
+  padding: 0px 0;
+  
+}
+
+.social-icons img {
+  
+  width: 18px;
+  height: 18px;
+  margin: 0 5px;
+  transition: filter 0.3s ease-in-out;
+}
+
+
+/* Hide the header on scroll down: */
+.sticky-header.hide {
+  top: -80px; /* Adjust this value as needed to hide the entire header */
+} 
+
+@media (max-width: 768px) { 
+
+.social-icons {
+    /* Ensure icons remain visible on smaller screens */
+    display: flex; 
+}  
+} 
 
 .content {
-  padding-top: 160px; /* Adjust according to header height */
+
+  padding-top: 120px;
   text-align: center;
 }
 

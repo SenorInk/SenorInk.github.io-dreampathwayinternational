@@ -1,26 +1,4 @@
-var TrandingSlider = new Swiper('.tranding-slider', {
-    effect: 'coverflow',
-    grabCursor: true,
-    centeredSlides: true,
-    loop: true,
-    slidesPerView: 'auto',
-    coverflowEffect: {
-      rotate: 0,
-      stretch: 0,
-      depth: 100,
-      modifier: 2.5,
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    }
-  });
-
-  const menuToggle = document.querySelector('.menu-toggle');
+const menuToggle = document.querySelector('.menu-toggle');
     const drawerMenu = document.querySelector('.drawer-menu');
     const header = document.querySelector('headertext'); // Get a reference to the header
 

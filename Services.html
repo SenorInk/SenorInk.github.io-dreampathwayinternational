@@ -9,14 +9,65 @@
 </head>
 
 <header>
+  <div class="sticky-header">
+    <div class="social-icons">
+      <a href="https://www.facebook.com/dreampathway" target="_blank" >
+          <img src="Image/Icons/White/facebook-svgrepo-com (1).png" alt="">
+        </a>
+
+        <a href="https://www.linkedin.com/company/dream-pathway-international/" target="_blank">
+          <img src="Image/Icons/White/linkedin-svgrepo-com.png" alt="">
+        </a>
+        
+        <a href="https://www.youtube.com/@DreamPathwayOfficial" target="_blank">
+          <img src="Image/Icons/White/youtube-svgrepo-com.png" alt="">
+        </a>
+
+        <a href="https://www.tiktok.com/@dreampathway" target="_blank">
+          <img src="Image/Icons/White/tiktok-svgrepo-com.png" alt="">
+        </a>
+    </div>
+</div>
+
+  <button class="menu-toggle" aria-label="Open Menu" aria-controls="main-nav" aria-expanded="false">
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+  </button>
+
+  <nav id="main-nav" class="drawer-menu">
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="Services.html" >Services</a></li>
+      <li class="dropdown">
+        <a href="AboutUs.html" class="dropbtn">About Us <span id="arrow">▼</span></a>
+        <div class="dropdown-content">
+          <a href="AboutUs.html#whoweare">Who We Are</a>
+          <a href="AboutUs.html#about">Mission, Vission, And Core Values</a>
+          <a href="AboutUs.html#profile">Meet The Team</a>
+        </div>
+      </li>
+      <li><a href="consultation-form.html">Free Consultation</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">Client Feedbacks <span id="arrow">▼</span></a>
+        <div class="dropdown-content">
+          <a href="granted_visa.html">Granted Visa</a>
+          <a href="client_success_story.html">Client Success Story</a>
+          <a href="client_testimonials.html">Client Testimonials</a>
+        </div>
+      </li>
+      <li><a href="ContactUs.html">Contact Us</a></li>
+    </ul>
+  </nav>
+  
   <div class="header-container">
-    <a href="home.html" class="logo"><img src="Image/Logo/White.png" alt="Dream Pathway Logo" style="position: relative;"></a>
+    <a href="#home" class="logo"><img src="Image/Logo/White.png" alt="Dream Pathway Logo" style="position: relative;"></a>
     <nav class="headertext">
       <ul>
         <li><a href="home.html">Home</a></li>
-        <li><a href="#services" class="active">Services</a></li>
+        <li><a href="Services.html" >Services</a></li>
         <li class="dropdown">
-          <a href="AboutUs.html" class="dropbtn">About Us <span id="arrow">▼</span></a>
+          <a href="AboutUs.html" class="dropbtn">About Us <span id="arrow">&#11167</span></a>
           <div class="dropdown-content">
             <a href="AboutUs.html#whoweare">Who We Are</a>
             <a href="AboutUs.html#about">Mission, Vission, And Core Values</a>
@@ -25,17 +76,17 @@
         </li>
         <li><a href="consultation-form.html">Free Consultation</a></li>
         <li class="dropdown">
-          <a href="#" class="dropbtn">Client Feedbacks <span id="arrow">▼</span></a>
+          <a href="ClientFeedbacks.html" class="dropbtn">Client Feedbacks <span id="arrow">&#11167</span></a>
           <div class="dropdown-content">
-            <a href="granted_visa.html">Granted Visa</a>
-            <a href="client_success_story.html">Client Success Story</a>
-            <a href="client_testimonials.html">Client Testimonials</a>
+            <a href="ClientFeedbacks.html#tranding">Granted Visa</a>
+            <a href="ClientFeedbacks.html#testimonial">Client Testimonials</a>
           </div>
         </li>
         <li><a href="ContactUs.html">Contact Us</a></li>
       </ul>
     </nav>
   </div>
+  
 </header>
 
 <body>
@@ -114,30 +165,6 @@
   </div>
 </div>
 </div>
-<script>
-  const navLinks = document.querySelectorAll('.headertext ul li a');
-
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      // Remove 'active' from other links 
-      navLinks.forEach(otherLink => otherLink.classList.remove('active')); 
-      // Add 'active' to the clicked link
-      link.classList.add('active');
-    });
-  });
-
-  const learnMoreButtons = document.querySelectorAll('.button[data-service]');
-
-    learnMoreButtons.forEach(button => {
-    button.addEventListener('click', (event) => {
-        event.preventDefault(); // Prevent default link behavior
-
-        const service = button.dataset.service;
-        const consultationFormUrl = 'consultation-form.html?service=' + encodeURIComponent(service);
-
-        window.location.href = consultationFormUrl; 
-    });
-  });
-  </script>
+<script src="services-script.js"></script>
 </body>
 </html>

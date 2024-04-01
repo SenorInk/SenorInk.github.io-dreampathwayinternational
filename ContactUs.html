@@ -6,7 +6,7 @@
   <title>Contact Us</title>
   <link rel="stylesheet" href="styleContactUs.css">
 </head>
-<body>
+
   <header>
     <div class="sticky-header">
       <div class="social-icons">
@@ -37,7 +37,7 @@
     <nav id="main-nav" class="drawer-menu">
       <ul>
         <li><a href="home.html">Home</a></li>
-        <li><a href="#services">Services</a></li>
+        <li><a href="Services.html">Services</a></li>
         <li class="dropdown">
           <a href="AboutUs.html" class="dropbtn">About Us <span id="arrow">▼</span></a>
           <div class="dropdown-content">
@@ -58,16 +58,15 @@
         <li><a href="ContactUs.html">Contact Us</a></li>
       </ul>
     </nav>
-
     
     <div class="header-container">
-      <a href="home.html" class="logo"><img src="Image/Logo/White.png" alt="Dream Pathway Logo" style="position: relative;"></a>
+      <a href="#home" class="logo"><img src="Image/Logo/White.png" alt="Dream Pathway Logo" style="position: relative;"></a>
       <nav class="headertext">
         <ul>
           <li><a href="home.html">Home</a></li>
-          <li><a href="#services">Services</a></li>
+          <li><a href="Services.html">Services</a></li>
           <li class="dropdown">
-            <a href="AboutUs.html" class="dropbtn">About Us <span id="arrow">▼</span></a>
+            <a href="AboutUs.html" class="dropbtn">About Us <span id="arrow">&#11167</span></a>
             <div class="dropdown-content">
               <a href="AboutUs.html#whoweare">Who We Are</a>
               <a href="AboutUs.html#about">Mission, Vission, And Core Values</a>
@@ -76,20 +75,21 @@
           </li>
           <li><a href="consultation-form.html">Free Consultation</a></li>
           <li class="dropdown">
-            <a href="#" class="dropbtn">Client Feedbacks <span id="arrow">▼</span></a>
+            <a href="ClientFeedbacks.html" class="dropbtn">Client Feedbacks <span id="arrow">&#11167</span></a>
             <div class="dropdown-content">
-              <a href="granted_visa.html">Granted Visa</a>
-              <a href="client_success_story.html">Client Success Story</a>
-              <a href="client_testimonials.html">Client Testimonials</a>
+              <a href="ClientFeedbacks.html#tranding">Granted Visa</a>
+              <a href="ClientFeedbacks.html#testimonial">Client Testimonials</a>
             </div>
           </li>
           <li><a href="ContactUs.html">Contact Us</a></li>
         </ul>
       </nav>
     </div>
-
     
   </header>
+
+<body>
+
 
   <div class="location-container">
     <div class="location">
@@ -934,33 +934,6 @@
 </div>
 -->
 </div>
-
-
-
-  <script>
-    const menuToggle = document.querySelector('.menu-toggle');
-    const drawerMenu = document.querySelector('.drawer-menu');
-    const header = document.querySelector('headertext'); // Get a reference to the header
-
-    menuToggle.addEventListener('click', () => {
-    drawerMenu.classList.toggle('open');
-    header.classList.toggle('hidden'); // Toggle the 'hidden' class
-    menuToggle.setAttribute('aria-expanded', drawerMenu.classList.contains('open'));
-  });
-
-  // At the bottom of your existing JavaScript, or in a new <script> tag
-  window.addEventListener('scroll', function() {
-    const header = document.querySelector('.sticky-header');
-    let scrollPosition = window.scrollY; 
-
-    if (scrollPosition > 50) {  // Adjust threshold when to start hiding
-        header.classList.add('hide');
-    } else {
-        header.classList.remove('hide');
-    }
-  });
-
-  </script>
-
+<script src="contactus-script.js"></script>
 </body>
 </html>

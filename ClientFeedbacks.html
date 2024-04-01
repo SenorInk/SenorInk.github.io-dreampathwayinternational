@@ -9,41 +9,93 @@
   <link rel="stylesheet" href="styleClientFeedbacks.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 </head>
-<body>
-  <header>
-    <div class="header-container">
-      <a href="home.html" class="logo"><img src="Image/Logo/White.png" alt="Dream Pathway Logo" style="position: relative;"></a>
-      <nav class="headertext">
-        <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li class="dropdown">
-            <a href="AboutUs.html" class="dropbtn">About Us <span id="arrow">▼</span></a>
-            <div class="dropdown-content">
-              <a href="AboutUs.html#whoweare">Who We Are</a>
-              <a href="AboutUs.html#about">Mission, Vission, And Core Values</a>
-              <a href="AboutUs.html#profile">Meet The Team</a>
-            </div>
-          </li>
-          <li><a href="consultation-form.html">Free Consultation</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropbtn">Client Feedbacks <span id="arrow">▼</span></a>
-            <div class="dropdown-content">
-              <a href="granted_visa.html">Granted Visa</a>
-              <a href="client_success_story.html">Client Success Story</a>
-              <a href="client_testimonials.html">Client Testimonials</a>
-            </div>
-          </li>
-          <li><a href="ContactUs.html">Contact Us</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 
+	<header>
+		<div class="sticky-header">
+		  <div class="social-icons">
+			<a href="https://www.facebook.com/dreampathway" target="_blank" >
+				<img src="Image/Icons/White/facebook-svgrepo-com (1).png" alt="">
+			  </a>
+	
+			  <a href="https://www.linkedin.com/company/dream-pathway-international/" target="_blank">
+				<img src="Image/Icons/White/linkedin-svgrepo-com.png" alt="">
+			  </a>
+			  
+			  <a href="https://www.youtube.com/@DreamPathwayOfficial" target="_blank">
+				<img src="Image/Icons/White/youtube-svgrepo-com.png" alt="">
+			  </a>
+	
+			  <a href="https://www.tiktok.com/@dreampathway" target="_blank">
+				<img src="Image/Icons/White/tiktok-svgrepo-com.png" alt="">
+			  </a>
+		  </div>
+	  </div>
+	
+		<button class="menu-toggle" aria-label="Open Menu" aria-controls="main-nav" aria-expanded="false">
+		  <span class="hamburger-line"></span>
+		  <span class="hamburger-line"></span>
+		  <span class="hamburger-line"></span>
+		</button>
+	  
+		<nav id="main-nav" class="drawer-menu">
+		  <ul>
+			<li><a href="home.html">Home</a></li>
+			<li><a href="Services.html">Services</a></li>
+			<li class="dropdown">
+			  <a href="AboutUs.html" class="dropbtn">About Us <span id="arrow">▼</span></a>
+			  <div class="dropdown-content">
+				<a href="AboutUs.html#whoweare">Who We Are</a>
+				<a href="AboutUs.html#about">Mission, Vission, And Core Values</a>
+				<a href="AboutUs.html#profile">Meet The Team</a>
+			  </div>
+			</li>
+			<li><a href="consultation-form.html">Free Consultation</a></li>
+			<li class="dropdown">
+			  <a href="#" class="dropbtn">Client Feedbacks <span id="arrow">▼</span></a>
+			  <div class="dropdown-content">
+				<a href="granted_visa.html">Granted Visa</a>
+				<a href="client_success_story.html">Client Success Story</a>
+				<a href="client_testimonials.html">Client Testimonials</a>
+			  </div>
+			</li>
+			<li><a href="ContactUs.html">Contact Us</a></li>
+		  </ul>
+		</nav>
+		
+		<div class="header-container">
+		  <a href="#home" class="logo"><img src="Image/Logo/White.png" alt="Dream Pathway Logo" style="position: relative;"></a>
+		  <nav class="headertext">
+			<ul>
+			  <li><a href="home.html">Home</a></li>
+			  <li><a href="Services.html">Services</a></li>
+			  <li class="dropdown">
+				<a href="AboutUs.html" class="dropbtn">About Us <span id="arrow">&#11167</span></a>
+				<div class="dropdown-content">
+				  <a href="AboutUs.html#whoweare">Who We Are</a>
+				  <a href="AboutUs.html#about">Mission, Vission, And Core Values</a>
+				  <a href="AboutUs.html#profile">Meet The Team</a>
+				</div>
+			  </li>
+			  <li><a href="consultation-form.html">Free Consultation</a></li>
+			  <li class="dropdown">
+				<a href="ClientFeedbacks.html" class="dropbtn">Client Feedbacks <span id="arrow">&#11167</span></a>
+				<div class="dropdown-content">
+				  <a href="ClientFeedbacks.html#tranding">Granted Visa</a>
+				  <a href="ClientFeedbacks.html#testimonial">Client Testimonials</a>
+				</div>
+			  </li>
+			  <li><a href="ContactUs.html">Contact Us</a></li>
+			</ul>
+		  </nav>
+		</div>
+		
+	  </header>
+	
+	
+<body>
   <section id="tranding">
 	<div class="container-tranding">
 	  <h3 class="text-center section-subheading">Client Feedback</h3>
@@ -236,7 +288,7 @@
 						<div class="content">
 							<span class="rating-star"><i class="icofont-star"></i><i class="icofont-star"></i><i class="icofont-star"></i><i class="icofont-star"></i><i class="icofont-star"></i></span>
 							<p>“ Medyo natagalan lang kasi 'yung mga documents ko hindi ko masyadong na-ano. 'Di ako makapaniwala ambilis lang, ambilis. Parang kailan lang ako nagpa-biometrics. Nag-alangan nga ako sa bank account ko buti hindi naano. Actually 'nung nag-search ako ilang agency 'yung napag-tanungan ko, 'yung sa inyo lang talaga 'yung ano. Saka may promo kasi kayo nun e. Super thank you talaga, super thank you. Sa mga nag-aaspire na mapunta sa Canda 'wag lang kayong bibitaw. Tsaka kung gusto n'yo talaga mapabilis dapat ready na talaga yung mga documents n'yo para ilan na lang, ako umabot ng one year e. ”</p>
-							<h4>>Ms. Mendoza</h4>
+							<h4>Ms. Mendoza</h4>
 							<h6>★ ★ ★ ★ ★</h6>
 						</div>
 					</div>

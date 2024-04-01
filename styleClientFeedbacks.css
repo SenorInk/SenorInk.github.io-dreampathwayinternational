@@ -1,35 +1,51 @@
 @font-face {
-    font-family: 'Poppins'; 
-    src: url('Poppins/Poppins-Light.ttf') format('truetype'); 
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Poppinss'; 
-    src: url('Poppins/Poppins-Medium.ttf') format('truetype'); 
-    font-weight: normal;
-    font-style: normal;
-  }
+  font-family: 'Poppins'; 
+  src: url('Fonts/Poppins/Poppins-Light.ttf') format('truetype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppinss'; 
+  src: url('Fonts/Poppins/Poppins-Medium.ttf') format('truetype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppinsss'; 
+  src: url('Fonts/Poppins/Poppins-SemiBold.ttf') format('truetype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AlexBrush'; 
+  src: url('Fonts/Alex_Brush/AlexBrush-Regular.ttf') format('truetype'); 
+  font-weight: normal;
+  font-style: normal;
+}
 body{
   padding-top: 200px;
   margin: 0; /* Add this line to remove the default margin */
+  font-family: 'Montserrat', sans-serif;
+    background-color: #f6f3ea;
 }
 
 header {
-    font-family: sans-serif;
-    background-color: #004AAD;
-    color: #004AAD; /* Adjusted text color for better contrast */
-    padding: 0px 0;
-    height: 130px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+  font-family: 'Poppins', sans-serif;
+  background-color: #004AAD;
+  color: #004AAD; /* Adjusted text color for better contrast */
+  padding: 0px 0;
+  height: 130px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 }
-
+  
 .header-container {
-  display: flex;  
+  display: flex;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 25px; /* Adjust to move the logo upwards */
@@ -39,8 +55,8 @@ header {
     margin-top: 30px;
     width: 200px; /* Adjust logo size */
     height: auto; /* Maintain aspect ratio */
-    padding-left: 40px;
-}
+    padding-left: 40px; 
+  }
   
   nav ul {
     list-style-type: none;
@@ -60,7 +76,6 @@ header {
     text-decoration: none;
     padding: 5px 10px;
     position: relative;
-    transition: color 0.3 ease;
   }
   
   nav ul li a::after {
@@ -73,22 +88,165 @@ header {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%); /* Center the underline */
-    transition: width 0.6s ease; /* Add transition effect for width */
+    transition: width 0.3s ease; /* Add transition effect for width */
   }
   
   nav ul li a:hover::after {
     width: 100%;
   }
 
-  nav ul li a:hover{
-    color: #ffde59;
-    transition: color 0.7s ease;
-  }
+  /* ... Other styles ... */
+
+/* Drawer menu */
+.drawer-menu {
+  display: none; /* Initially hide the menu */
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px; /* Adjust width of the drawer */
+  height: 100%;
+  background-color: #004AAD;
+  color: #fff;
+  padding: 20px;
+  overflow-y: auto; /* Add scroll when content exceeds height */
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.3); 
+  z-index: 2000; /* Ensure drawer is above other content */
+  transition: transform 0.3s ease-in-out; /* Add transition */
+  z-index: 2000; 
+}
+
+.drawer-menu .dropdown-content {
+  display: none; 
+  position: relative; /* Changed from absolute */
+  top: 0; /* Align the dropdown below its parent */
+  left: 0; /* Position the dropdown relative to its parent (the dropdown list item) */
+  background-color: #003f92f1;
+  min-width: 100%; /* Make the dropdown content take up the full width */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* (Optional) Add shadow */
+  z-index: 3000; /* Ensure visibility on top of other drawer items */
+}
+
+.drawer-menu .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.drawer-menu.open {
+  transform: translateX(0); /* Move menu to the right edge */
+}
+
+.drawer-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.drawer-menu li a {
+  color: #fff;
+  display: block;
+  padding: 10px 0px;
+  text-decoration: none;
   
-  .content {
-    padding-top: 160px; /* Adjust according to header height */
-    text-align: center;
+}
+
+.menu-toggle {
+  margin-left: 20px;
+  display: none; /* Hide by default on larger screens */
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  position: relative; /* To position lines relatively*/
+  width: 40px; /* Adjust width if needed */
+  height: 30px; /* Adjust height if needed */
+  z-index: 2001;
+}
+
+.menu-toggle .hamburger-line {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+}
+
+
+/* 'X' (close) style - Activated by JavaScript */
+.menu-toggle.open .hamburger-line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.open .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open .hamburger-line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+/* Responsive layout - show menu button on smaller screens */
+@media (max-width: 1259px) { 
+  header .headertext{
+    display: none;
   }
+  .menu-toggle {
+    display: block;
+    position: absolute; /* Position button within header */
+    top: 30px; 
+    right: 30px;
+  }
+
+  .drawer-menu.open {
+    display: block;
+  }
+}
+
+.sticky-header {
+  position: fixed;  /* Make the header stick to the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1c243f; /* Or your desired background color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  z-index: 100; /* Ensure header is on top of content */
+  transition: top 0.3s ease-in-out; /* Add a smooth transition */
+}
+
+.social-icons {
+  margin-top: 1px;
+  display: flex;
+  justify-content: right; /* Center the icons */
+  padding: 0px 0;
+  
+}
+
+.social-icons img {
+  
+  width: 18px;
+  height: 18px;
+  margin: 0 5px;
+  transition: filter 0.3s ease-in-out;
+}
+
+
+/* Hide the header on scroll down: */
+.sticky-header.hide {
+  top: -80px; /* Adjust this value as needed to hide the entire header */
+} 
+
+@media (max-width: 768px) { 
+
+.social-icons {
+    /* Ensure icons remain visible on smaller screens */
+    display: flex; 
+}  
+} 
+
+.content {
+
+  padding-top: 120px;
+  text-align: center;
+}
   
   footer {
     background-color: #004AAD;
@@ -106,9 +264,9 @@ header {
     display: none;
     position: absolute;
     background-color: #003f92f1;
-    min-width: 160px; /* Adjust width as needed */
-    top: 100%; /* Position dropdown below the text */
-    left: 0; /* Align dropdown with the left edge of its parent */
+    min-width: 160px;
+    top: 100%;
+    left: 0;
   }
   
   .dropdown-content a {
@@ -122,7 +280,7 @@ header {
   .dropdown-content span {
     display: inline-block;
     margin-left: 5px;
-    transition: transform 0.3s ease; /* Add transition for smooth animation */
+    transition: transform 0.3s ease;
   }
   
   /* Rotate the arrow on hover */
@@ -132,6 +290,7 @@ header {
   
   .dropdown-content a:hover {
     background-color: #003f92f1;
+    
   }
   
   /* Display dropdown content on hover */
@@ -139,23 +298,18 @@ header {
     display: block;
   }
 
-
-  body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #f6f3ea;
-  }
   .testimonial {
     padding: 80px 0;
     margin: 0 auto;
   }
   .sec-heading {
-    margin-bottom: 60px;
+    margin-bottom: 50px;
   }
   .sec-heading h6 {
     font-family: allura;
     font-weight: 900;
     font-size: 80px;
-    
+    margin-bottom: -75px;
   }
   .single-box {
     border: 5px solid #e6f0fa;
@@ -199,6 +353,8 @@ header {
   }
   .single-box h6{
     color: #ffde59;
+    font-size: 20px;
+    margin-top: 0;
   }
   .testi-carousel-three .single-box {
     border: 0;
@@ -246,33 +402,8 @@ header {
     }
   }
 
-  @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 
-
-:root {
-  --primary: #ec994b;
-  --white: #ffffff;
-  --bg: #f5f5f5;
-}
-
-::-webkit-scrollbar {
-  width: 1.3rem;
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 1rem;
-  background: #797979;
-  transition: all 0.5s ease-in-out;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #222224;
-}
-
-::-webkit-scrollbar-track {
-  background: #f9f9f9;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 
 .container-tranding {
   max-width: 124rem;
@@ -378,4 +509,29 @@ header {
 
 .tranding-slider-control .swiper-pagination .swiper-pagination-bullet-active {
   background: var(--primary);
+}
+
+.container,.container-fluid,.container-lg,.container-md,.container-sm,.container-xl{
+  width:100%;
+  padding-right:15px;
+  padding-left:15px;
+  margin-right:auto;
+  margin-left:auto
+}
+@media (min-width:576px){
+  .container,.container-sm{
+    max-width:540px}
+  }
+@media (min-width:768px){
+  .container,.container-md,.container-sm{
+    max-width:720px}
+  }
+@media (min-width:992px){
+  .container,.container-lg,.container-md,.container-sm{
+    max-width:960px
+  }
+}
+@media (min-width:1200px){
+  .container,.container-lg,.container-md,.container-sm,.container-xl
+  {max-width:1140px}
 }
