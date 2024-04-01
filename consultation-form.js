@@ -66,14 +66,15 @@ if (service) {
 }
 
 const menuToggle = document.querySelector('.menu-toggle');
-    const drawerMenu = document.querySelector('.drawer-menu');
-    const header = document.querySelector('headertext'); // Get a reference to the header
+const drawerMenu = document.querySelector('.drawer-menu');
+const headerText = document.querySelector('.headertext'); // Corrected the class name
 
-    menuToggle.addEventListener('click', () => {
+menuToggle.addEventListener('click', () => {
     drawerMenu.classList.toggle('open');
-    header.classList.toggle('hidden'); // Toggle the 'hidden' class
+    headerText.classList.toggle('hidden'); // Corrected the class name
+    menuToggle.classList.toggle('open');
     menuToggle.setAttribute('aria-expanded', drawerMenu.classList.contains('open'));
-  });
+});
 
   // At the bottom of your existing JavaScript, or in a new <script> tag
   window.addEventListener('scroll', function() {

@@ -187,6 +187,8 @@
   .menu-toggle.open .hamburger-line:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
+  
+  
   /* Responsive layout - show menu button on smaller screens */
   @media (max-width: 1259px) { 
     header .headertext{

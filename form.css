@@ -88,7 +88,7 @@ textarea {
   font-family: 'Poppins', sans-serif;
 }
 
-button {
+.submitbtn {
   background-color: #004AAD;
   color: #fff;
   padding: 10px 20px;
@@ -99,7 +99,7 @@ button {
   overflow: hidden;
 }
 
-button:hover::after {
+.submitbtn:hover::after {
   content: '';
   position: absolute;
   width: 100%;
