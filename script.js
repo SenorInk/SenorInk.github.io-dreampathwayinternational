@@ -9,10 +9,7 @@ menuToggle.addEventListener('click', () => {
     menuToggle.setAttribute('aria-expanded', drawerMenu.classList.contains('open'));
 });
 
-
-
-  // At the bottom of your existing JavaScript, or in a new <script> tag
-  window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function() {
     const header = document.querySelector('.sticky-header');
     let scrollPosition = window.scrollY; 
 
@@ -21,5 +18,5 @@ menuToggle.addEventListener('click', () => {
     } else {
         header.classList.remove('hide');
     }
-  });
+});
 
