@@ -43,3 +43,13 @@ var TrandingSlider = new Swiper('.tranding-slider', {
     }
   });
 
+  const navLinks = document.querySelectorAll('.headertext ul li a');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      // Remove 'active' from other links 
+      navLinks.forEach(otherLink => otherLink.classList.remove('active')); 
+      // Add 'active' to the clicked link
+      link.classList.add('active');
+    });
+  });

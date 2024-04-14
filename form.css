@@ -180,8 +180,18 @@ header {
     transition: width 0.3s ease; /* Add transition effect for width */
   }
   
-  nav ul li a:hover::after {
-    width: 100%;
+  nav ul li a:hover::after,
+  nav ul li a.active::after { /* Apply underline to active class */
+    width: 100%; 
+  }
+  /* ... your existing CSS ... */
+  
+  nav ul li a.inactive {
+    text-decoration: none; /* Remove any default underline */
+  }
+  
+  nav ul li a.inactive::after {
+    display: none; /* Hide the underline */
   }
 
   /* ... Other styles ... */
