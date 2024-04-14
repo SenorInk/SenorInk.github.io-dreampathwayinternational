@@ -20,3 +20,35 @@ window.addEventListener('scroll', function() {
     }
 });
 
+// Assuming you've fetched the actual follower and like counts from Facebook's API
+const followerCountTarget = 23000; // Replace with your actual follower count
+const likeCountTarget = 22000; // Replace with your actual like count
+
+const followerCountElement = document.querySelector('.follower-count');
+const likeCountElement = document.querySelector('.like-count');
+
+// Simple animation loop
+function animateCount(countElement, targetCount, duration) {
+  let currentCount = 0;
+  const timeInterval = 30; // Update the count every 30ms
+  const increment = Math.ceil(targetCount / (duration / timeInterval));
+
+  const counter = setInterval(() => {
+    currentCount += increment;
+
+    // Modification: 
+    if (currentCount >= targetCount) {
+      clearInterval(counter);
+      countElement.textContent = targetCount + "+"; // Add the '+' sign
+    } else {
+       countElement.textContent = currentCount;
+    }
+  }, timeInterval); 
+}
+
+// Start the animation once the elements are ready
+window.addEventListener('load', () => {
+  animateCount(followerCountElement, followerCountTarget, 2000); 
+  animateCount(likeCountElement, likeCountTarget, 2000);    
+});
+

@@ -259,7 +259,7 @@
   
   .home img {
     width: 100%;
-    height: auto;
+    height: 80vh;
   }
   
   .text-overlay {
@@ -489,4 +489,34 @@
     width: 20px; 
     height: 20px;
   }
+  
+
+  .social-media-container {
+    display: flex;
+    justify-content: space-around; /* Adjust spacing as needed */
+    align-items: center;         /* Vertically center content */ 
+    background: linear-gradient(90deg, rgba(93,224,230,1) 0%, rgba(66,132,221,1) 44%, rgba(0,74,173,1) 100%);
+    background: linear-gradient(90deg,  rgba(0,74,173,1) 0%, rgba(66,132,221,1) 44%, rgba(93,224,230,1) 100%);
+  }
+  
+  .followers-likes { 
+    /* Add styles for appearance and spacing */
+  }
+  
+  .facebook-feed {
+    /* Add additional styling if desired */
+  }
+  
+  /* Example styling for follower/like counters */
+  .followers-likes h2 {
+    color: #fff;
+    margin-bottom: 5px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .follower-count, .like-count {
+    color: #fff;
+    font-size: 36px; /* Adjust size as needed */
+    font-family: 'Poppins', sans-serif;
+  } 
   
