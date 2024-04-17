@@ -143,7 +143,7 @@
       <p class="like-count">0</p> 
   </div>
   <div class="facebook-feed">
-    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FDreamPathInternational&tabs=timeline&width=500&height=750&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="500" height="750" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FDreamPathInternational&tabs=timeline&width=400&height=750&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="400" height="750" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
   </div>
 </div>
 
@@ -152,7 +152,26 @@
     <p>&copy; 2024 Dream Pathway All rights reserved.</p>
   </footer>
   <script src="script.js"></script>
-  <script src="//code.tidio.co/lgbjy4oisdxcxgd2m8xnhumckcidhenh.js" async></script>
+  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+  <script>
+    window.botpressWebChat.init({
+        "composerPlaceholder": "Chat with DP",
+        "botConversationDescription": "Dream Pathway Bot",
+        "botId": "8e7fb866-c9b7-44f9-99b5-31ab9aa08706",
+        "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+        "messagingUrl": "https://messaging.botpress.cloud",
+        "clientId": "8e7fb866-c9b7-44f9-99b5-31ab9aa08706",
+        "webhookId": "e44929f2-b330-4dd1-848a-c16396fd3f15",
+        "lazySocket": true,
+        "themeName": "prism",
+        "botName": "DP",
+        "avatarUrl": "https://i.imgur.com/0EQPVwG.png?1",
+        "stylesheet": "https://webchat-styler-css.botpress.app/prod/code/8f4304d8-db52-41da-b671-f7fef92039f7/v89812/style.css",
+        "frontendVersion": "v1",
+        "theme": "prism",
+        "themeColor": "#2563eb"
+    });
+  </script>
   <script>
     // JavaScript for changing images every 3 seconds
     const slides = document.querySelectorAll('.slide');
