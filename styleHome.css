@@ -743,3 +743,15 @@ nav ul li a.inactive::after {
     width: 10;
   }
 }
+
+/* Hide all content by default */
+.hidden {
+  display: none;
+}
+
+/* Show content after preloader completes */
+#splash.loaded + header,
+#splash.loaded + .content,
+#splash.loaded + footer {
+  display: block;
+}

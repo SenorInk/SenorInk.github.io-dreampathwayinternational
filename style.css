@@ -1,35 +1,78 @@
-@font-face {
-  font-family: 'Lobster';
-  src: url("DancingScript-VariableFont_wght.ttf");
+#splash {
+  background: #004AAD;
+  background-repeat: repeat-y;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  animation: splash 3s ease-in;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
 }
-body {
-  background: #3b3edb;
-  font-family:'Lobster';
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-  opacity: 0; /* Set initial opacity to 0 */
-  transition: opacity 1s; /* Add transition for fade effect */
-}
-h1 {
-  position: relative;
-  color: #0000004d;
-  font-size: 60px;
-}
-h1:before {
-  content: attr(data-text);
+
+#loader {
   position: absolute;
-  overflow: hidden;
-  max-width: 0;
-  white-space: nowrap;
-  color: #fff;
-  animation: loading 2s linear forwards;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%,0);
 }
-@keyframes loading {
+
+#loader:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  margin-left: -8px;
+  bottom: -170px;
+  width: 3px;
+  background: #fff;
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+  height: 200px;
+}
+
+#loader:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  margin-left: 8px;
+  bottom: -190px;
+  width: 3px;
+  background: #000;
+  background: linear-gradient(to bottom, rgba(0,0,0,.2) 0%, rgba(0,0,0,.2) 50%, rgba(0,0,0,0) 100%);
+  height: 200px;
+}
+
+#splash .anim {
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  width: 100px;
+  transform: translate(-50%,100%);
+  animation: loader 5s linear;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes loader {
+  0% {
+    transform: translate(-50%,110%);
+  }
+  30% {
+    transform: translate(-50%,50%);
+  }
   100% {
-    max-width: 7em;
+    transform: translate(-50%,0%);
+  }
+}
+
+@keyframes splash {
+  0% {
+    transform: translate(0%,0%);
+  }
+  50% {
+    transform: translate(0%,0%);
+  }
+  100% {
+    transform: translate(0%,-100%);
   }
 }

@@ -4,11 +4,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dream Pathway</title>
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="styleHome.css">
 </head>
 <body>
-  
-  <header>
+
+  <div id="splash">
+    <div class="anim">
+      <div id="loader">
+        <svg version="1.1" width="60px" height="70px" viewBox="0 0 60 70">
+          <defs>
+            <filter id="f1" x="0" y="0">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+            </filter>
+          </defs>
+          <g id="airplane">
+            <path fill="#000" d="M0.677,20.977l4.355,1.631c0.281,0.104,0.579,0.162,0.88,0.16l9.76-0.004L30.46,41.58c0.27,0.34,0.679,0.545,1.112,0.541
+            h1.87c0.992,0,1.676-0.992,1.322-1.918l-6.643-17.439l6.914,0.002l6.038,6.037c0.265,0.266,0.624,0.412,0.999,0.418l1.013-0.004
+            c1.004-0.002,1.684-1.012,1.312-1.938l-2.911-7.277l2.912-7.278c0.372-0.928-0.313-1.941-1.313-1.938h1.017
+            c-0.375,0-0.732,0.15-0.996,0.414l-6.039,6.039h-6.915l6.646-17.443c0.354-0.926-0.33-1.916-1.321-1.914l-1.87-0.004
+            c-0.439,0.004-0.843,0.203-1.112,0.543L15.677,17.24l-9.765-0.002c-0.3,0.002-0.597,0.055-0.879,0.16L0.678,19.03
+            C-0.225,19.36-0.228,20.637,0.677,20.977z" transform="translate(44,0) rotate(90 0 0)" />
+          </g>
+          <g id="shadow" transform="scale(.9)">
+            <path fill="#000" fill-opacity="0.3" d="M0.677,20.977l4.355,1.631c0.281,0.104,0.579,0.162,0.88,0.16l9.76-0.004L30.46,41.58c0.27,0.34,0.679,0.545,1.112,0.541
+            h1.87c0.992,0,1.676-0.992,1.322-1.918l-6.643-17.439l6.914,0.002l6.038,6.037c0.265,0.266,0.624,0.412,0.999,0.418l1.013-0.004
+            c1.004-0.002,1.684-1.012,1.312-1.938l-2.911-7.277l2.912-7.278c0.372-0.928-0.313-1.941-1.313-1.938h1.017
+            c-0.375,0-0.732,0.15-0.996,0.414l-6.039,6.039h-6.915l6.646-17.443c0.354-0.926-0.33-1.916-1.321-1.914l-1.87-0.004
+            c-0.439,0.004-0.843,0.203-1.112,0.543L15.677,17.24l-9.765-0.002c-0.3,0.002-0.597,0.055-0.879,0.16L0.678,19.03
+            C-0.225,19.36-0.228,20.637,0.677,20.977z" transform="translate(64,30) rotate(90 0 0)" filter="url(#f1)" />
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <header class="hidden">
     <div class="sticky-header">
       <div class="social-icons">
         <a href="https://www.facebook.com/dreampathway" target="_blank" >
@@ -90,7 +121,7 @@
 
   
 
-  <div class="content">
+  <div class="content hidden" >
     <section id="home">
       <div class="home">
         <div class="slider">
@@ -113,7 +144,7 @@
   </div>
 
 <!--Button-->
-<div class="button-container">
+<div class="button-container hidden" >
   <a href="Services.html#SV" class="button">
     <img src="Image/Profile/test.png" alt="Image">
     <span>Student Visa</span>
@@ -135,7 +166,7 @@
   </a>
 </div>
 
-<div class="social-media-container"> 
+<div class="social-media-container hidden" > 
   <div class="followers-likes">
       <h2>Followers</h2>
       <p class="follower-count">0</p>
@@ -148,30 +179,11 @@
 </div>
 
 
-  <footer>
+  <footer class="hidden">
     <p>&copy; 2024 Dream Pathway All rights reserved.</p>
   </footer>
   <script src="script.js"></script>
   <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
-  <script>
-    window.botpressWebChat.init({
-        "composerPlaceholder": "Chat with DP",
-        "botConversationDescription": "Dream Pathway Bot",
-        "botId": "8e7fb866-c9b7-44f9-99b5-31ab9aa08706",
-        "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
-        "messagingUrl": "https://messaging.botpress.cloud",
-        "clientId": "8e7fb866-c9b7-44f9-99b5-31ab9aa08706",
-        "webhookId": "e44929f2-b330-4dd1-848a-c16396fd3f15",
-        "lazySocket": true,
-        "themeName": "prism",
-        "botName": "DP",
-        "avatarUrl": "https://i.imgur.com/0EQPVwG.png?1",
-        "stylesheet": "https://webchat-styler-css.botpress.app/prod/code/8f4304d8-db52-41da-b671-f7fef92039f7/v89812/style.css",
-        "frontendVersion": "v1",
-        "theme": "prism",
-        "themeColor": "#2563eb"
-    });
-  </script>
   <script>
     // JavaScript for changing images every 3 seconds
     const slides = document.querySelectorAll('.slide');
@@ -191,5 +203,35 @@
     // Change slide every 3 seconds
     setInterval(nextSlide, 4000);
   </script>
+  <script>
+    // JavaScript for preloader animation and showing content after preloader completes
+    document.addEventListener("DOMContentLoaded", function() {
+      const splash = document.getElementById('splash');
+      setTimeout(() => {
+        splash.classList.add('loaded');
+        document.querySelectorAll('.hidden').forEach(el => el.classList.remove('hidden'));
+  
+        // Move the chatbot initialization code here
+        window.botpressWebChat.init({
+          "composerPlaceholder": "Chat with DP",
+          "botConversationDescription": "Dream Pathway Bot",
+          "botId": "8e7fb866-c9b7-44f9-99b5-31ab9aa08706",
+          "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+          "messagingUrl": "https://messaging.botpress.cloud",
+          "clientId": "8e7fb866-c9b7-44f9-99b5-31ab9aa08706",
+          "webhookId": "e44929f2-b330-4dd1-848a-c16396fd3f15",
+          "lazySocket": true,
+          "themeName": "prism",
+          "botName": "DP",
+          "avatarUrl": "https://i.imgur.com/0EQPVwG.png?1",
+          "stylesheet": "https://webchat-styler-css.botpress.app/prod/code/8f4304d8-db52-41da-b671-f7fef92039f7/v89812/style.css",
+          "frontendVersion": "v1",
+          "theme": "prism",
+          "themeColor": "#2563eb"
+        });
+      }, 3000);
+    });
+  </script>
+  
 </body>
 </html>
