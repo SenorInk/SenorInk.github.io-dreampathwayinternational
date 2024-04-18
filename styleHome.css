@@ -106,7 +106,6 @@ nav ul li a.inactive {
 nav ul li a.inactive::after {
   display: none; /* Hide the underline */
 }
-
   
     /* ... Other styles ... */
   
@@ -428,6 +427,15 @@ nav ul li a.inactive::after {
   }
   
 /* Buttons */
+.services{
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  background-color: aliceblue;
+  padding-top: 30px;
+  margin: 0%;
+  font-family: 'Poppins', sans-serif;
+}
 .button-container {
   display: flex;
   justify-content: center;
