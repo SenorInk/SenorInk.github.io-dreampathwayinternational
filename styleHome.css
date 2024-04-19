@@ -649,7 +649,7 @@ nav ul li a.inactive::after {
 @media (max-width: 600px) {
   header {
     position: fixed;
-    width: 100%; /* Set maximum width to 100% for smaller screens */
+    width: 96%; /* Set maximum width to 100% for smaller screens */
     height: 5rem;
   }
 
@@ -677,7 +677,7 @@ nav ul li a.inactive::after {
   }
 
   .drawer-menu {
-    width: 50%; /* Adjust width of the drawer for smaller screens */
+    width: 60%; /* Adjust width of the drawer for smaller screens */
     padding: 0px; /* Adjust padding for smaller screens */
     right: 0;
   }
