@@ -648,8 +648,9 @@ nav ul li a.inactive::after {
 
 @media (max-width: 600px) {
   header {
-    width: 47vh; /* Set maximum width to 100% for smaller screens */
-    height: 10vh;
+    position: fixed;
+    width: 100%; /* Set maximum width to 100% for smaller screens */
+    height: 5rem;
   }
 
   .sticky-header{
@@ -657,7 +658,7 @@ nav ul li a.inactive::after {
   }
 
   .logo img {
-    width: 150px; /* Adjust logo size for smaller screens */
+    width: 120px; /* Adjust logo size for smaller screens */
     padding-left: 10px; /* Reduce left padding for logo */
     margin-top: 15px;
   }
@@ -685,8 +686,11 @@ nav ul li a.inactive::after {
     right: 5px; /* Adjust right position of menu toggle button */
   }
 
+  .services{
+    width: 100%;
+  }
   .button-container {
-    width: 44vh;
+    width: 100%;
     flex-direction: column; /* Stack buttons vertically on smaller screens */
     height: auto; /* Reset height */
   }
@@ -698,7 +702,7 @@ nav ul li a.inactive::after {
   .content {
     padding-top: 80px; /* Adjust padding for smaller screens */
     text-align: center;
-    width: 46.1vh;
+    width: 100%;
   }
   
   .home img {
@@ -707,20 +711,20 @@ nav ul li a.inactive::after {
   }
   
   .text-overlay h1 {
-    font-size: 120px; /* Adjust the font size for smaller screens */
+    font-size: 6rem; /* Adjust the font size for smaller screens */
   }
   
   .text-overlay h2 {
-    font-size: 24px; /* Adjust the font size for smaller screens */
+    font-size: 1.3rem; /* Adjust the font size for smaller screens */
     margin-top: -10px; /* Adjust the margin for smaller screens */
   }
   
   .text-overlay p {
-    font-size: 14px; /* Adjust the font size for smaller screens */
+    font-size: 0.8rem; /* Adjust the font size for smaller screens */
   }
   
   .homeButton {
-    font-size: 14px; /* Adjust the font size for smaller screens */
+    font-size: 0.8rem; /* Adjust the font size for smaller screens */
     padding: 8px 16px; /* Adjust the padding for smaller screens */
   }
   
@@ -746,16 +750,15 @@ nav ul li a.inactive::after {
   .follower-count, .like-count {
     font-size: 24px; /* Decrease font size for smaller screens */
   }
-  .facebook-feed {
-    /* Adjust width and padding for smaller screens */
-    width: 10;
-  }
+
 }
 
 /* Hide all content by default */
 .hidden {
   display: none;
 }
+
+
 
 /* Show content after preloader completes */
 #splash.loaded + header,
