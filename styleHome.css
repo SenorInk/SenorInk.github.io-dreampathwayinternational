@@ -542,8 +542,9 @@ nav ul li a.inactive::after {
   /* Adjustments for mobile responsiveness */
 @media (max-width: 767px) {
   header {
-    width: 47vh; /* Set maximum width to 100% for smaller screens */
-    height: 10vh;
+    position: fixed;
+    width: 100%; /* Set maximum width to 100% for smaller screens */
+    height: 5rem;
   }
 
   .sticky-header{
