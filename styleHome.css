@@ -540,118 +540,16 @@ nav ul li a.inactive::after {
   } 
   
   /* Adjustments for mobile responsiveness */
-@media (max-width: 767px) {
-  header {
-    position: fixed;
-    width: 100%; /* Set maximum width to 100% for smaller screens */
-    height: 5rem;
-  }
 
-  .sticky-header{
-    display: none;
-  }
-
-  .logo img {
-    width: 150px; /* Adjust logo size for smaller screens */
-    padding-left: 10px; /* Reduce left padding for logo */
-    margin-top: 15px;
-  }
-
-  nav ul {
-    padding-top: 20px; /* Reduce top padding for navigation */
-    font-size: 16px; /* Decrease font size for navigation items */
-  }
-
-  nav ul li {
-    margin: 0 5px; /* Reduce margin between navigation items */
-  }
-
-  nav ul li a {
-    padding: 5px 7px; /* Adjust padding for navigation items */
-  }
-
-  .drawer-menu {
-    width: 50%; /* Adjust width of the drawer for smaller screens */
-    padding: 0px; /* Adjust padding for smaller screens */
-    right: 0;
-  }
-
-  .menu-toggle {
-    right: 5px; /* Adjust right position of menu toggle button */
-  }
-
-  .button-container {
-    width: 44vh;
-    flex-direction: column; /* Stack buttons vertically on smaller screens */
-    height: auto; /* Reset height */
-  }
-  .button {
-    width: 80%; /* Adjust button width */
-    height: auto; /* Adjust button height */
-  }
-
-  .content {
-    padding-top: 80px; /* Adjust padding for smaller screens */
-    text-align: center;
-    width: 46.1vh;
-  }
-  
-  .home img {
-    width: 100%;
-    height: 50vh; /* Allow the height to adjust proportionally */
-  }
-  
-  .text-overlay h1 {
-    font-size: 120px; /* Adjust the font size for smaller screens */
-  }
-  
-  .text-overlay h2 {
-    font-size: 24px; /* Adjust the font size for smaller screens */
-    margin-top: -10px; /* Adjust the margin for smaller screens */
-  }
-  
-  .text-overlay p {
-    font-size: 14px; /* Adjust the font size for smaller screens */
-  }
-  
-  .homeButton {
-    font-size: 14px; /* Adjust the font size for smaller screens */
-    padding: 8px 16px; /* Adjust the padding for smaller screens */
-  }
-  
-  
-  .icons img {
-    width: 16px; /* Adjust icon size for smaller screens */
-    height: 16px; /* Adjust icon size for smaller screens */
-    margin: 0 3px; /* Adjust margin for smaller screens */
-  }
-  
-  .social-media-container {
-    justify-content: space-around; /* Adjust spacing for smaller screens */
-  }
-  .button-container:hover > .button:not(:hover) {
-    filter: none;
-    transform: none;
-  }
-  .social-media-container {
-    flex-direction: column; /* Stack items vertically on smaller screens */
-    padding: 20px 0; /* Add padding top and bottom */
-  }
-
-  .follower-count, .like-count {
-    font-size: 24px; /* Decrease font size for smaller screens */
-  }
-  .facebook-feed {
-    /* Adjust width and padding for smaller screens */
-    width: 10;
-  }
-}
 
 @media (max-width: 600px) {
+  *{
+    overflow-x: hidden;
+  }
   header {
-    position: fixed;
-    width: 96%; /* Set maximum width to 100% for smaller screens */
-    height: 5rem;
+    width: 100%; /* Set maximum width to 100% for smaller screens */
+    height: 15vh;
+    overflow-y: hidden;
   }
 
   .sticky-header{
@@ -661,7 +559,7 @@ nav ul li a.inactive::after {
   .logo img {
     width: 120px; /* Adjust logo size for smaller screens */
     padding-left: 10px; /* Reduce left padding for logo */
-    margin-top: 15px;
+    margin-top: 10px;
   }
 
   nav ul {
@@ -684,16 +582,15 @@ nav ul li a.inactive::after {
   }
 
   .menu-toggle {
-    right: 5px; /* Adjust right position of menu toggle button */
+    top: 20px;
+    right: 10px; /* Adjust right position of menu toggle button */
   }
 
-  .services{
-    width: 100%;
-  }
   .button-container {
     width: 100%;
     flex-direction: column; /* Stack buttons vertically on smaller screens */
     height: auto; /* Reset height */
+    
   }
   .button {
     width: 80%; /* Adjust button width */
@@ -701,23 +598,29 @@ nav ul li a.inactive::after {
   }
 
   .content {
-    padding-top: 80px; /* Adjust padding for smaller screens */
+    padding-top: 75px; /* Adjust padding for smaller screens */
     text-align: center;
     width: 100%;
+
   }
   
   .home img {
     width: 100%;
     height: 50vh; /* Allow the height to adjust proportionally */
+    
   }
   
   .text-overlay h1 {
     font-size: 6rem; /* Adjust the font size for smaller screens */
+    overflow-y: hidden;
+    
   }
   
   .text-overlay h2 {
-    font-size: 1.3rem; /* Adjust the font size for smaller screens */
+    font-size: 1.2rem; /* Adjust the font size for smaller screens */
     margin-top: -10px; /* Adjust the margin for smaller screens */
+    overflow-y: hidden;
+    
   }
   
   .text-overlay p {
@@ -728,17 +631,7 @@ nav ul li a.inactive::after {
     font-size: 0.8rem; /* Adjust the font size for smaller screens */
     padding: 8px 16px; /* Adjust the padding for smaller screens */
   }
-  
-  
-  .icons img {
-    width: 16px; /* Adjust icon size for smaller screens */
-    height: 16px; /* Adjust icon size for smaller screens */
-    margin: 0 3px; /* Adjust margin for smaller screens */
-  }
-  
-  .social-media-container {
-    justify-content: space-around; /* Adjust spacing for smaller screens */
-  }
+
   .button-container:hover > .button:not(:hover) {
     filter: none;
     transform: none;
@@ -752,13 +645,16 @@ nav ul li a.inactive::after {
     font-size: 24px; /* Decrease font size for smaller screens */
   }
 
+  .services{
+    font-size: 2rem;
+  }
+
 }
 
 /* Hide all content by default */
 .hidden {
   display: none;
 }
-
 
 
 /* Show content after preloader completes */

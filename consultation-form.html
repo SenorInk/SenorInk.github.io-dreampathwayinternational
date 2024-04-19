@@ -172,6 +172,23 @@
 </div>
 
 <script src="consultation-form.js"></script>
+<!-- Inside the JavaScript section -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var selectedService = localStorage.getItem('selectedService');
+    if (selectedService) {
+      var serviceDropdown = document.getElementById('services');
+      var options = serviceDropdown.options;
+      for (var i = 0; i < options.length; i++) {
+        if (options[i].value === selectedService) {
+          options[i].selected = true;
+          break;
+        }
+      }
+    }
+  });
+</script>
+
 
 </body>
 
