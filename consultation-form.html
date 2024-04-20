@@ -94,7 +94,7 @@
 
 <div class="form-container">
   <h2>Dream Pathway</h2>
-  <form id="consultation-form">
+  <form id="consultation-form" name="contact-form" method="post" action="https://script.google.com/macros/s/AKfycbyPkLZtUF7MdSz2oQeWfzPtLKXTd0lySMnXrFHn0RQoJRJPI8dLS2J01yk3yUFw9AAC/exec">
     <div class="form-group">
       <label for="name">Name</label>
       <div class="name-inputs">
@@ -189,6 +189,19 @@
   });
 </script>
 
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyPkLZtUF7MdSz2oQeWfzPtLKXTd0lySMnXrFHn0RQoJRJPI8dLS2J01yk3yUFw9AAC/exec'
+
+const form = document.forms['contact-form']
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+  .then(response => alert("Thank you! your form is submitted successfully." ))
+  .then(() => { window.location.reload(); })
+  .catch(error => console.error('Error!', error.message))
+})
+</script>
 
 </body>
 
