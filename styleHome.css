@@ -301,19 +301,7 @@ nav ul li a.inactive::after {
     text-align: center;
   }
   
-  .homeButton{
-    background-color: #004AAD;
-    color: #fff;
-    font-family: 'Poppinss', sans-serif;
-    font-size: 16px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
+
   
   
   footer {
@@ -426,17 +414,28 @@ nav ul li a.inactive::after {
     margin-right: 0px; /* Remove margin from the last item */
   }
   
-/* Buttons */
-.services{
-  text-align: center;
-  font-size: 40px;
-  font-weight: bold;
-  background-color: aliceblue;
-  padding-top: 30px;
-  margin: 0%;
-  font-family: 'Poppins', sans-serif;
-}
+  .services-container {
+    position: relative; /* Make the container a positioning context */
+    
+  }
+  
+  .services {
+    position: absolute; /* Position the text absolutely */
+    top: 0; /* Place it at the top of the container */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    background-color: aliceblue;
+    padding-top: 30px;
+    margin: 0%;
+    font-family: 'Poppins', sans-serif;
+    width: 100%; /* Make the text span the full width of the container */
+  }
+  
 .button-container {
+  margin-top: 7vh;
   display: flex;
   justify-content: center;
   padding: 2%;
@@ -545,7 +544,7 @@ nav ul li a.inactive::after {
   /* Adjustments for mobile responsiveness */
 
 
-@media (max-width: 600px) {
+@media only screen and (max-width: 768px){
 
   header {
     width: 100%; /* Set maximum width to 100% for smaller screens */
@@ -588,6 +587,7 @@ nav ul li a.inactive::after {
   }
 
   .button-container {
+    margin-top: 5vh;
     width: 96%;
     flex-direction: column; /* Stack buttons vertically on smaller screens */
     height: auto; /* Reset height */
@@ -634,13 +634,7 @@ nav ul li a.inactive::after {
     padding: 8px 16px; /* Adjust the padding for smaller screens */
   }
 
-  .facebook-feed{
-    margin: 0;
-    width: 100%;
-  }
-  .fb-page{
-    padding-left: 5px;
-  }
+
 
   .button-container:hover > .button:not(:hover) {
     filter: none;
@@ -665,8 +659,129 @@ nav ul li a.inactive::after {
   .services{
     font-size: 1.6rem;
   }
+  
 
 }
+
+@media only screen and (max-width: 425px){
+
+  header {
+    width: 100%; /* Set maximum width to 100% for smaller screens */
+    height: 5rem;
+
+  }
+
+  .sticky-header{
+    display: none;
+  }
+
+  .logo img {
+    width: 120px; /* Adjust logo size for smaller screens */
+    padding-left: 10px; /* Reduce left padding for logo */
+    margin-top: 13px;
+  }
+
+  nav ul {
+    padding-top: 20px; /* Reduce top padding for navigation */
+    font-size: 20px; /* Decrease font size for navigation items */
+  }
+
+  nav ul li {
+    margin: 0 5px; /* Reduce margin between navigation items */
+  }
+
+  nav ul li a {
+    padding: 5px 7px; /* Adjust padding for navigation items */
+  }
+
+  .drawer-menu {
+    width: 60%; /* Adjust width of the drawer for smaller screens */
+    padding: 0px; /* Adjust padding for smaller screens */
+    right: 0;
+  }
+
+  .menu-toggle {
+    top: 20px;
+    right: 10px; /* Adjust right position of menu toggle button */
+  }
+
+  .services-container{
+    margin-top: -6vh;
+    width: 108%;
+  }
+  .button-container {
+    padding-top: 5rem;
+    width: 100%;
+    flex-direction: column; /* Stack buttons vertically on smaller screens */
+    height: auto; /* Reset height */
+  }
+
+  .services {
+    width: 109%;
+    font-size: 1.8rem; /* Adjust font size for services */
+    margin-top: 20px; /* Add margin-top for spacing */
+  }
+
+  .button {
+    width: 80%; /* Adjust button width */
+    height: auto; /* Adjust button height */
+    margin-left: 1.5rem;
+  }
+
+  .content {
+    padding-top: 75px; /* Adjust padding for smaller screens */
+    text-align: center;
+    width: 100%;
+  }
+
+  .home img {
+    width: 113%;
+    height: 50vh; /* Allow the height to adjust proportionally */
+  }
+
+  .text-overlay h1 {
+    padding-left: 3rem;
+    font-size: 8rem; /* Adjust the font size for smaller screens */
+  }
+
+  .text-overlay h2 {
+    padding-left: 3rem;
+    font-size: 1.3rem; /* Adjust the font size for smaller screens */
+    margin-top: -10px; /* Adjust the margin for smaller screens */
+  }
+
+  .text-overlay p {
+    padding-left: 3rem;
+    font-size: 1.1rem; /* Adjust the font size for smaller screens */
+  }
+
+  .homeButton {
+    font-size: 1.1rem; /* Adjust the font size for smaller screens */
+    padding: 8px 16px; /* Adjust the padding for smaller screens */
+  }
+
+  .button-container:hover > .button:not(:hover) {
+    filter: none;
+    transform: none;
+  }
+
+  .social-media-container {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    padding: 20px 0; /* Add padding top and bottom */
+  }
+
+  .followers-likes h2 {
+    margin: 2rem;
+    margin-bottom: 5px;
+  }
+
+  .follower-count, .like-count {
+    margin: 2rem;
+    font-size: 24px;
+  } 
+
+}
+
 
 /* Hide all content by default 
 .hidden {

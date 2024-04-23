@@ -148,97 +148,97 @@
 
 <!--Button-->
 
-<h2 class="services hidden">SERVICES</h2>
-<div class="button-container hidden" >
-  <a href="Services.html#SV" class="button">
-    <img src="Image/Profile/test.png" alt="Image">
-    <span>Student Visa</span>
-  </a>
-
-  <a href="Services.html#PRwJO" class="button">
-    <img src="Image/Profile/test.png" alt="Image">
-    <span>Permanent Residency with Job Offer</span>
-  </a>
-
-  <a href="Services.html#PR" class="button">
-    <img src="Image/Profile/test.png" alt="Image">
-    <span>Permanent Residency</span>
-  </a>
-
-  <a href="Services.html#OneOnOne" class="button">
-    <img src="Image/Profile/test.png" alt="Image">
-    <span>Tourist Visa</span>
-  </a>
+<div class="services-container hidden">
+  <h2 class="services">SERVICES</h2>
+  <div class="button-container">
+    <a href="Services.html#SV" class="button">
+      <img src="Image/Profile/test.png" alt="Image">
+      <span>Student Visa</span>
+    </a>
+    <a href="Services.html#PRwJO" class="button">
+      <img src="Image/Profile/test.png" alt="Image">
+      <span>Permanent Residency with Job Offer</span>
+    </a>
+    <a href="Services.html#PR" class="button">
+      <img src="Image/Profile/test.png" alt="Image">
+      <span>Permanent Residency</span>
+    </a>
+    <a href="Services.html#OneOnOne" class="button">
+      <img src="Image/Profile/test.png" alt="Image">
+      <span>Tourist Visa</span>
+    </a>
+  </div>
 </div>
 
-<div class="social-media-container hidden" > 
+<div class="social-media-container hidden"> 
   <div class="followers-likes">
-      <h2>Followers</h2>
-      <p class="follower-count">0</p>
-      <h2>Likes</h2>
-      <p class="like-count">0</p> 
+    <h2>Followers</h2>
+    <p class="follower-count">0</p>
+    <h2>Likes</h2>
+    <p class="like-count">0</p> 
   </div>
   <div class="facebook-feed">
     <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0" nonce="OzqKehbQ"></script>
-<div class="fb-page" data-href="https://www.facebook.com/DreamPathInternational" data-tabs="timeline" data-width="500" data-height="800" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/DreamPathInternational" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/DreamPathInternational">DREAM Pathway International</a></blockquote></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0" nonce="OzqKehbQ"></script>
+    <div class="fb-page" data-href="https://www.facebook.com/DreamPathInternational" data-tabs="timeline" data-width="500" data-height="800" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/DreamPathInternational" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/DreamPathInternational">DREAM Pathway International</a></blockquote></div>
   </div>
 </div>
 
+<footer class="hidden">
+  <p>&copy; 2024 Dream Pathway All rights reserved.</p>
+</footer>
 
-  <footer class="hidden">
-    <p>&copy; 2024 Dream Pathway All rights reserved.</p>
-  </footer>
-  <script src="script.js"></script>
-  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
-  <script>
-    // JavaScript for changing images every 3 seconds
-    const slides = document.querySelectorAll('.slide');
-    let currentSlide = 0;
+<script src="script.js"></script>
+<script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script>
+  // JavaScript for changing images every 3 seconds
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
 
-    function nextSlide() {
-      slides[currentSlide].style.display = 'none';
-      currentSlide = (currentSlide + 1) % slides.length;
-      slides[currentSlide].style.display = 'block';
-    }
+  function nextSlide() {
+    slides[currentSlide].style.display = 'none';
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].style.display = 'block';
+  }
 
-    // Initially hide all slides except the first one
-    for (let i = 1; i < slides.length; i++) {
-      slides[i].style.display = 'none';
-    }
+  // Initially hide all slides except the first one
+  for (let i = 1; i < slides.length; i++) {
+    slides[i].style.display = 'none';
+  }
 
-    // Change slide every 3 seconds
-    setInterval(nextSlide, 4000);
-  </script>
-  <script>
-    // JavaScript for preloader animation and showing content after preloader completes
-    document.addEventListener("DOMContentLoaded", function() {
-      const splash = document.getElementById('splash');
-      setTimeout(() => {
-        splash.classList.add('loaded');
-        document.querySelectorAll('.hidden').forEach(el => el.classList.remove('hidden'));
-  
-        // Move the chatbot initialization code here
-        window.botpressWebChat.init({
-          "composerPlaceholder": "Chat with DP",
-          "botConversationDescription": "Dream Pathway Bot",
-          "botId": "8e7fb866-c9b7-44f9-99b5-31ab9aa08706",
-          "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
-          "messagingUrl": "https://messaging.botpress.cloud",
-          "clientId": "8e7fb866-c9b7-44f9-99b5-31ab9aa08706",
-          "webhookId": "e44929f2-b330-4dd1-848a-c16396fd3f15",
-          "lazySocket": true,
-          "themeName": "prism",
-          "botName": "DP",
-          "avatarUrl": "https://i.imgur.com/0EQPVwG.png?1",
-          "stylesheet": "https://webchat-styler-css.botpress.app/prod/code/8f4304d8-db52-41da-b671-f7fef92039f7/v89812/style.css",
-          "frontendVersion": "v1",
-          "theme": "prism",
-          "themeColor": "#2563eb"
-        });
-      }, 3000);
-    });
-  </script>
-  
+  // Change slide every 3 seconds
+  setInterval(nextSlide, 4000);
+</script>
+
+<script>
+  // JavaScript for preloader animation and showing content after preloader completes
+  document.addEventListener("DOMContentLoaded", function() {
+    const splash = document.getElementById('splash');
+    setTimeout(() => {
+      splash.classList.add('loaded');
+      document.querySelectorAll('.hidden').forEach(el => el.classList.remove('hidden'));
+
+      // Move the chatbot initialization code here
+      window.botpressWebChat.init({
+        "composerPlaceholder": "Chat with DP",
+        "botConversationDescription": "Dream Pathway Bot",
+        "botId": "8e7fb866-c9b7-44f9-99b5-31ab9aa08706",
+        "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+        "messagingUrl": "https://messaging.botpress.cloud",
+        "clientId": "8e7fb866-c9b7-44f9-99b5-31ab9aa08706",
+        "webhookId": "e44929f2-b330-4dd1-848a-c16396fd3f15",
+        "lazySocket": true,
+        "themeName": "prism",
+        "botName": "DP",
+        "avatarUrl": "https://i.imgur.com/0EQPVwG.png?1",
+        "stylesheet": "https://webchat-styler-css.botpress.app/prod/code/8f4304d8-db52-41da-b671-f7fef92039f7/v89812/style.css",
+        "frontendVersion": "v1",
+        "theme": "prism",
+        "themeColor": "#2563eb"
+      });
+    }, 3000);
+  });
+</script>
+
 </body>
 </html>
