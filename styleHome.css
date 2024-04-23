@@ -523,17 +523,20 @@ nav ul li a.inactive::after {
   }
   
   .facebook-feed {
-    /* Add additional styling if desired */
+    margin: 5rem;
+    width: 500px;
   }
   
   /* Example styling for follower/like counters */
   .followers-likes h2 {
+    margin-left: 10rem;
     color: #fff;
     margin-bottom: 5px;
     font-family: 'Poppins', sans-serif;
   }
   
   .follower-count, .like-count {
+    margin-left: 10rem;
     color: #fff;
     font-size: 36px; /* Adjust size as needed */
     font-family: 'Poppins', sans-serif;
@@ -543,13 +546,11 @@ nav ul li a.inactive::after {
 
 
 @media (max-width: 600px) {
-  *{
-    overflow-x: hidden;
-  }
+
   header {
     width: 100%; /* Set maximum width to 100% for smaller screens */
-    height: 15vh;
-    overflow-y: hidden;
+    height: 5rem;
+
   }
 
   .sticky-header{
@@ -559,12 +560,12 @@ nav ul li a.inactive::after {
   .logo img {
     width: 120px; /* Adjust logo size for smaller screens */
     padding-left: 10px; /* Reduce left padding for logo */
-    margin-top: 10px;
+    margin-top: 13px;
   }
 
   nav ul {
     padding-top: 20px; /* Reduce top padding for navigation */
-    font-size: 16px; /* Decrease font size for navigation items */
+    font-size: 25px; /* Decrease font size for navigation items */
   }
 
   nav ul li {
@@ -587,7 +588,7 @@ nav ul li a.inactive::after {
   }
 
   .button-container {
-    width: 100%;
+    width: 96%;
     flex-direction: column; /* Stack buttons vertically on smaller screens */
     height: auto; /* Reset height */
     
@@ -595,6 +596,7 @@ nav ul li a.inactive::after {
   .button {
     width: 80%; /* Adjust button width */
     height: auto; /* Adjust button height */
+    margin-left: 2;
   }
 
   .content {
@@ -611,25 +613,33 @@ nav ul li a.inactive::after {
   }
   
   .text-overlay h1 {
-    font-size: 6rem; /* Adjust the font size for smaller screens */
-    overflow-y: hidden;
+    font-size: 9.5rem; /* Adjust the font size for smaller screens */
+
     
   }
   
   .text-overlay h2 {
-    font-size: 1.2rem; /* Adjust the font size for smaller screens */
+    font-size: 2.5rem; /* Adjust the font size for smaller screens */
     margin-top: -10px; /* Adjust the margin for smaller screens */
-    overflow-y: hidden;
+
     
   }
   
   .text-overlay p {
-    font-size: 0.8rem; /* Adjust the font size for smaller screens */
+    font-size: 1.2rem; /* Adjust the font size for smaller screens */
   }
   
   .homeButton {
-    font-size: 0.8rem; /* Adjust the font size for smaller screens */
+    font-size: 1.1rem; /* Adjust the font size for smaller screens */
     padding: 8px 16px; /* Adjust the padding for smaller screens */
+  }
+
+  .facebook-feed{
+    margin: 0;
+    width: 100%;
+  }
+  .fb-page{
+    padding-left: 5px;
   }
 
   .button-container:hover > .button:not(:hover) {
@@ -641,25 +651,33 @@ nav ul li a.inactive::after {
     padding: 20px 0; /* Add padding top and bottom */
   }
 
-  .follower-count, .like-count {
-    font-size: 24px; /* Decrease font size for smaller screens */
+  .followers-likes h2 {
+    margin: 2rem;
+    margin-bottom: 5px;
+
   }
+  
+  .follower-count, .like-count {
+    margin: 2rem;
+    font-size: 24px; 
+  } 
 
   .services{
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
 }
 
-/* Hide all content by default */
+/* Hide all content by default 
 .hidden {
   display: none;
 }
+*/
 
-
-/* Show content after preloader completes */
+/* Show content after preloader completes 
 #splash.loaded + header,
 #splash.loaded + .content,
 #splash.loaded + footer {
   display: block;
 }
+*/

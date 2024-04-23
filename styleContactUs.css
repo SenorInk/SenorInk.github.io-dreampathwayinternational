@@ -462,5 +462,36 @@ p{
   width: 30px;
   height: 30px;
 }
+.social-icons {
+  display: flex;
+  justify-content: space-between;
+  width: 200px; /* Adjust width as needed */
+}
+
+.icon {
+  font-size: 2em; /* Adjust font size as needed */
+  color: #fff; /* Initial color */
+  transition: all 0.3s ease-in-out; /* Animation speed */
+}
+
+.social-icons:hover .icon {
+  transform: rotateY(360deg); /* Rotation animation */
+}
+
+.fab:hover.fa-facebook-f {
+  color: #3b5998; /* Facebook blue */
+}
+
+.fab:hover.fa-twitter {
+  color: #00aced; /* Twitter blue */
+}
+
+.fab:hover.fa-instagram {
+  color: #c13584; /* Instagram pink */
+}
+
+.fab:hover.fa-pinterest {
+  color: #c8232c; /* Pinterest red */
+}
 
   
