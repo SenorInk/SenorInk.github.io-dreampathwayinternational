@@ -1,0 +1,173 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    svg { overflow: visible; }
+  }
+  
+  .d-spinner {
+    $color-one: #ffde59;
+    $color-two: #ffe88d;
+    $color-three: #ffefaf;
+    $color-four: #fcf7e1;
+    animation-duration: 2.4s;
+    animation-timing-function: cubic-bezier(0, 1, 0.3, 1);
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+    transform-origin: left bottom;
+    &.d-spinner__one   { animation-name: dSpinnerOne; fill: $color-one; }
+    &.d-spinner__two   { animation-name: dSpinnerTwo; fill: $color-two; }
+    &.d-spinner__three { animation-name: dSpinnerThree; fill: $color-three; }
+    &.d-spinner__four  { animation-name: dSpinnerFour; fill: $color-four; }
+  
+  
+  
+  
+    @keyframes dSpinnerOne {
+      0% {
+        opacity: 0;
+        fill: lighten($color-one, 20%);
+        transform: rotateZ(-65deg) scale(0.6);
+      }
+      7% {
+        opacity: 1;
+        fill: lighten($color-one, 20%);
+        transform: rotateZ(0) scale(1.0);
+      }
+      57% {
+        animation-timing-function: cubic-bezier(0, 0, 0, 1);
+        fill: $color-one;
+      }
+      74% {
+        opacity: 1;
+        transform: rotateZ(0) scale(1.0);
+        animation-timing-function: cubic-bezier(0, 0, 1, 0);
+      }
+      83% {
+        opacity: 0;
+        transform: rotateZ(45deg) scale(0.61);
+      }
+      100% {
+        opacity: 0;
+        transform: rotateZ(45deg) scale(0.61);
+      }
+    }
+  
+    @keyframes dSpinnerTwo {
+      0% {
+        opacity: 0;
+        transform: rotateZ(-65deg) scale(0.6);
+      }
+      3% {
+        opacity: 0;
+        fill: lighten($color-two, 20%);
+        transform: rotateZ(-65deg) scale(0.6);
+      }
+      10% {
+        opacity: 1;
+        fill: lighten($color-two, 20%);
+        transform: rotateZ(0) scale(1.0);
+      }
+      60% {
+        animation-timing-function: cubic-bezier(0, 0, 0, 1);
+        fill: $color-two;
+      }
+      71% {
+        opacity: 1;
+        transform: rotateZ(0) scale(1.0);
+        animation-timing-function: cubic-bezier(0, 0, 1, 0);
+  
+      }
+      79% {
+        opacity: 0;
+        transform: rotateZ(45deg) scale(0.61);
+      }
+      100% {
+        opacity: 0;
+        transform: rotateZ(45deg) scale(0.61);
+      }
+    }
+  
+    @keyframes dSpinnerThree {
+      0% {
+        opacity: 0;
+        transform: rotateZ(-65deg) scale(0.6);
+      }
+      6% {
+        opacity: 0;
+        fill: lighten($color-three, 20%);
+        transform: rotateZ(-65deg) scale(0.6);
+      }
+      13% {
+        opacity: 1;
+        fill: lighten($color-three, 20%);
+        transform: rotateZ(0) scale(1.0);
+      }
+      63% {
+        fill: $color-three;
+        animation-timing-function: cubic-bezier(0, 0, 0, 1);
+  
+      }
+      68% {
+        opacity: 1;
+        transform: rotateZ(0) scale(1.0);
+        animation-timing-function: cubic-bezier(0, 0, 1, 0);
+  
+      }
+      76% {
+        opacity: 0;
+        transform: rotateZ(45deg) scale(0.61);
+      }
+      100% {
+        opacity: 0;
+        transform: rotateZ(45deg) scale(0.61);
+      }
+    }
+  
+    @keyframes dSpinnerFour {
+      0% {
+        opacity: 0;
+        transform: rotateZ(-65deg) scale(0.6);
+      }
+      9% {
+        opacity: 0;
+        fill: lighten($color-four, 20%);
+        transform: rotateZ(-65deg) scale(0.6);
+      }
+      16% {
+        opacity: 1;
+        fill: lighten($color-four, 20%);
+        transform: rotateZ(0) scale(1.0);
+      }
+      64% {
+        fill: $color-four;
+        animation-timing-function: cubic-bezier(0, 0, 0, 1);
+  
+      }
+      65% {
+        opacity: 1;
+        transform: rotateZ(0) scale(1.0);
+        animation-timing-function: cubic-bezier(0, 0, 1, 0);
+  
+      }
+      73% {
+        opacity: 0;
+        transform: rotateZ(45deg) scale(0.61);
+      }
+      100% {
+        opacity: 0;
+        transform: rotateZ(45deg) scale(0.61);
+      }
+    }
+  
+  }
+  
+  .gradient-primary {
+  background: rgb(0,74,173);
+  background: linear-gradient(0deg, rgba(0,74,173,1) 5%, rgba(82,173,255,1) 90%);
+  
+    background-size: auto, auto, 100% 1000px, 100% 1000px;
+    background-repeat: no-repeat; }
