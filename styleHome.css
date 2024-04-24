@@ -710,10 +710,14 @@ nav ul li a.inactive::after {
     width: 100%;
   }
   .button-container {
-    padding-top: 5rem;
-    width: 96%;
+    padding-right: 1.1rem;
+    width: 92%;
     flex-direction: column; /* Stack buttons vertically on smaller screens */
     height: auto; /* Reset height */
+  }
+
+  .button-container button{
+    padding-left: -4rem;
   }
 
   .services {
