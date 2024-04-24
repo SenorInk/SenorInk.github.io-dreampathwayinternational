@@ -711,7 +711,7 @@ nav ul li a.inactive::after {
   }
   .button-container {
     margin-top: 5rem;
-    padding-right: 1.15rem;
+    padding-right: 1.2rem;
     width: 92%;
     flex-direction: column; /* Stack buttons vertically on smaller screens */
     height: auto; /* Reset height */
