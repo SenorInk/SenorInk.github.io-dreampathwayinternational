@@ -663,7 +663,7 @@ nav ul li a.inactive::after {
 
 }
 
-@media only screen and (max-width: 425px){
+@media only screen and (max-width: 400px){
 
   header {
     width: 100%; /* Set maximum width to 100% for smaller screens */
@@ -706,18 +706,18 @@ nav ul li a.inactive::after {
   }
 
   .services-container{
-    margin-top: -6vh;
-    width: 108%;
+    margin-top: -4vh;
+    width: 100%;
   }
   .button-container {
     padding-top: 5rem;
-    width: 100%;
+    width: 96%;
     flex-direction: column; /* Stack buttons vertically on smaller screens */
     height: auto; /* Reset height */
   }
 
   .services {
-    width: 109%;
+    width: 100%;
     font-size: 1.8rem; /* Adjust font size for services */
     margin-top: 20px; /* Add margin-top for spacing */
   }
@@ -735,28 +735,26 @@ nav ul li a.inactive::after {
   }
 
   .home img {
-    width: 113%;
+    width: 100%;
     height: 50vh; /* Allow the height to adjust proportionally */
   }
 
   .text-overlay h1 {
-    padding-left: 3rem;
-    font-size: 8rem; /* Adjust the font size for smaller screens */
+
+    font-size: 5.8rem; /* Adjust the font size for smaller screens */
   }
 
   .text-overlay h2 {
-    padding-left: 3rem;
     font-size: 1.3rem; /* Adjust the font size for smaller screens */
     margin-top: -10px; /* Adjust the margin for smaller screens */
   }
 
   .text-overlay p {
-    padding-left: 3rem;
-    font-size: 1.1rem; /* Adjust the font size for smaller screens */
+    font-size: .8rem; /* Adjust the font size for smaller screens */
   }
 
   .homeButton {
-    font-size: 1.1rem; /* Adjust the font size for smaller screens */
+    font-size: 1rem; /* Adjust the font size for smaller screens */
     padding: 8px 16px; /* Adjust the padding for smaller screens */
   }
 
@@ -779,8 +777,16 @@ nav ul li a.inactive::after {
     margin: 2rem;
     font-size: 24px;
   } 
+  .fb-page-container {
+    width: 100%;
+  }
+  .facebook-feed{
+    width: 100%;
+  }
 
 }
+
+
 
 
 /* Hide all content by default 
