@@ -230,12 +230,90 @@ nav ul li a.inactive::after {
   
   .social-icons img {
     
-    width: 18px;
+    width: 18x;
     height: 18px;
     margin: 0 5px;
     transition: filter 0.3s ease-in-out;
   }
   
+  .social-icons-footer {
+    margin-top: 0;
+    display: flex;
+    padding-left: 165px;
+
+  }
+  
+  .social-icons-footer img {
+    width: 35px;
+    height: 35px;
+    margin: 0 5px;
+    transition: filter 0.3s ease-in-out;
+  }
+
+/*Footer*/
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  max-width: 100%; /* Adjust max-width as needed */
+  height: 30rem;
+  margin: 0 auto; /* Center the footer horizontally */
+  padding: 0 20px; /* Add padding to the sides */
+}
+  .description-container-footer {
+    width: 100%;
+    text-align: start;
+    align-self: start;
+    position: relative;
+    padding-top: 5rem; /* Remove the top padding */
+  }
+  .logo-footer {
+    display: flex;
+    align-items: center; /* Vertically center the image */
+    padding-left: 100px;
+    margin-right: 0;
+    padding-right: 0;
+  }
+  
+  .logo-footer img {
+    width: 300px; /* Adjust logo size */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .BAI {
+    display: flex;
+    align-items: flex-start; /* Vertically center the image */
+    padding-left: 4rem;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Poppins',sans-serif;
+    font-size: 2rem;
+    margin-top: 0;
+  }
+
+  .Office {
+    white-space: nowrap; /* Prevent line breaks */
+    text-align: start; /* Align text to the left */
+    padding-left: 4rem; /* Adjust as needed */
+    padding-right: 56rem;
+    padding-top: 7rem;
+    align-items: center; /* Vertically center the text */
+  }
+  
+  .office-info{
+    font-family: 'Poppins', sans-serif;
+    text-align: start;
+    font-size: 1rem;
+    margin-top: 0;
+  }
+
+  .main-office-header {
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    margin-top: 0;
+  }
   
   /* Hide the header on scroll down: */
   .sticky-header.hide {
@@ -441,5 +519,8 @@ h1{
     color: #fff;
     text-align: center;
     padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   
