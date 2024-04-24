@@ -710,7 +710,7 @@ nav ul li a.inactive::after {
     width: 100%;
   }
   .button-container {
-    padding-right: 1.1rem;
+    padding-right: 1.12rem;
     width: 92%;
     flex-direction: column; /* Stack buttons vertically on smaller screens */
     height: auto; /* Reset height */
