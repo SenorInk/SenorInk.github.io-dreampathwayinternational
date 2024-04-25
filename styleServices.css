@@ -523,4 +523,152 @@ h1{
     justify-content: space-between;
     align-items: center;
   }
+
+  @media only screen and (max-width: 768px){
+
+    header {
+      width: 100%; /* Set maximum width to 100% for smaller screens */
+      height: 5rem;
   
+    }
+  
+    .sticky-header{
+      display: none;
+    }
+  
+    .logo img {
+      width: 120px; /* Adjust logo size for smaller screens */
+      padding-left: 10px; /* Reduce left padding for logo */
+      margin-top: 13px;
+    }
+  
+    nav ul {
+      padding-top: 20px; /* Reduce top padding for navigation */
+      font-size: 25px; /* Decrease font size for navigation items */
+    }
+  
+    nav ul li {
+      margin: 0 5px; /* Reduce margin between navigation items */
+    }
+  
+    nav ul li a {
+      padding: 5px 7px; /* Adjust padding for navigation items */
+    }
+  
+    .drawer-menu {
+      width: 60%; /* Adjust width of the drawer for smaller screens */
+      padding: 0px; /* Adjust padding for smaller screens */
+      right: 0;
+    }
+  
+    .menu-toggle {
+      top: 20px;
+      right: 10px; /* Adjust right position of menu toggle button */
+    }
+    
+  
+  }
+  
+  @media only screen and (max-width: 400px){
+  
+    header {
+      width: 100%; /* Set maximum width to 100% for smaller screens */
+      height: 5rem;
+  
+    }
+  
+    .sticky-header{
+      display: none;
+    }
+  
+    .logo img {
+      width: 120px; /* Adjust logo size for smaller screens */
+      padding-left: 10px; /* Reduce left padding for logo */
+      margin-top: 13px;
+    }
+  
+    nav ul {
+      padding-top: 20px; /* Reduce top padding for navigation */
+      font-size: 20px; /* Decrease font size for navigation items */
+    }
+  
+    nav ul li {
+      margin: 0 5px; /* Reduce margin between navigation items */
+    }
+  
+    nav ul li a {
+      padding: 5px 7px; /* Adjust padding for navigation items */
+    }
+  
+    .drawer-menu {
+      width: 60%; /* Adjust width of the drawer for smaller screens */
+      padding: 0px; /* Adjust padding for smaller screens */
+      right: 0;
+    }
+  
+    .menu-toggle {
+      top: 20px;
+      right: 10px; /* Adjust right position of menu toggle button */
+    }    
+
+    .content{
+
+      
+    }
+
+    .description-container{
+      margin-top: -1rem;
+    }
+
+    .home img{
+      
+      width: 100%;
+      height: 15rem;
+      
+    }
+
+    body{
+      margin-top: -3rem;
+
+    }
+    .text-overlay h2{
+      padding-left: 1.2rem;
+      font-size: 2.7rem;
+    }
+
+    
+    .description{
+      flex-direction: column;
+      
+    }
+    .description2{
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center content horizontally */
+      text-align: center; /* Center text horizontally */
+    }
+
+    .description, .description2 h2{
+
+      
+    }
+
+    .description p{
+      text-align: justify;
+    }
+    .description2 p{
+      text-align: justify;
+    }
+
+    .description img{
+      width: 80%; /* Adjust the width of the image as needed */
+      max-width: 300px; /* Limit the maximum width of the image */
+      margin-bottom: 10px; /* Add some space below the image */
+    }
+
+    .description2 img{
+      width: 80%; /* Adjust the width of the image as needed */
+      max-width: 300px; /* Limit the maximum width of the image */
+      margin-bottom: 10px; /* Add some space below the image */
+    }
+  }
